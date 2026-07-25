@@ -83,13 +83,13 @@ export default function HeroSection() {
         style={{ scale: imageScale, y: imageY }}
       >
         <Image
-          src="/images/temple-renovated.png"
-          alt="Arasar Kovil Sacred Renovated Shrines and White Vimana Towers"
+          src="/images/hero-temple.png"
+          alt="Arasar Kovil Sacred Gopuram Temple emerging from golden fog"
           fill
           priority
           className="object-cover"
           sizes="100vw"
-          quality={90}
+          quality={95}
         />
       </motion.div>
 

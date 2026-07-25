@@ -152,7 +152,7 @@ export default function HistoryTimeline() {
           >
             <div className="relative h-56 w-full">
               <Image
-                src="/images/temple-renovated.png"
+                src="/images/temple-gopuram.png"
                 alt="Restored Arasar Kovil Shrines and White Vimana Towers"
                 fill
                 className="object-cover"

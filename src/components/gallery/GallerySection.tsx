@@ -8,7 +8,7 @@ import { gsap } from '@/lib/gsapConfig';
 import { X, ZoomIn } from 'lucide-react';
 
 const galleryImages = [
-  { src: '/images/temple-renovated.png', label: { en: 'Authentic Restored Vimana Shrines', ta: 'புனரமைக்கப்பட்ட திருப்பணி கோவில்கள்' }, category: 'architecture' },
+  { src: '/images/temple-gopuram.png', label: { en: 'Authentic Restored Vimana Shrines', ta: 'புனரமைக்கப்பட்ட திருப்பணி கோவில்கள்' }, category: 'architecture' },
   { src: '/images/temple-ancient.png', label: { en: 'Pre-Restoration Chola Stone Sanctum', ta: 'பண்டைய சோழ கல்வெட்டு கோவில்' }, category: 'architecture' },
   { src: '/images/goddess-lakshmi.png', label: { en: 'Goddess Sundara Mahalakshmi (6-Toes)', ta: 'சுந்தர மகாலட்சுமி (6 விரல்கள்)' }, category: 'deity' },
   { src: '/images/deity-vishnu.png', label: { en: 'Lord Kamala Varadharajar', ta: 'கமல வரதராஜர் பெருமாள்' }, category: 'deity' },
