@@ -110,6 +110,16 @@
   text-shadow: none !important;
 }
 
+/* Ensure all cards & images remain 100% visible on load */
+.about-card,
+.gallery-item,
+.timeline-item,
+.hero-title,
+.hero-subtitle,
+.hero-tagline {
+  opacity: 1;
+}
+
 /* =========================================
    BASE RESET & CENTERING
    ========================================= */
