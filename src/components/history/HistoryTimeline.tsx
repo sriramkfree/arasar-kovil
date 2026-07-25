@@ -133,29 +133,18 @@ export default function HistoryTimeline() {
                 }`}
               >
                 {/* Content Box */}
-                <div
-                  className={`flex-1 ml-12 md:ml-0 ${
-                    i % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'
-                  } text-left`}
-                >
-                  <div className="glass-card p-6 md:p-8 hover:border-amber-400/40 transition-all">
-                    <div
-                      className="inline-block px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3"
-                      style={{
-                        background: 'rgba(212,168,71,0.15)',
-                        color: 'var(--gold-300)',
-                        border: '1px solid rgba(212,168,71,0.3)',
-                      }}
-                    >
+                <div className="flex-1 w-full text-center flex flex-col items-center justify-center">
+                  <div className="glass-card p-6 md:p-8 rounded-2xl border border-amber-500/20 text-center flex flex-col items-center justify-center w-full max-w-lg mx-auto">
+                    <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2 text-amber-300 bg-amber-500/15 border border-amber-400/30 text-center">
                       {td(item.period)}
-                    </div>
+                    </span>
                     <h3
-                      className="text-xl font-bold mb-2 text-amber-100"
+                      className="text-lg md:text-xl font-bold mb-3 text-amber-100 text-center w-full"
                       style={{ fontFamily: 'var(--font-display)' }}
                     >
                       {td(item.era)}
                     </h3>
-                    <p className="text-xs sm:text-sm leading-relaxed text-gray-300">
+                    <p className="text-xs sm:text-sm leading-relaxed text-gray-300 text-center w-full">
                       {td(item.description)}
                     </p>
                   </div>

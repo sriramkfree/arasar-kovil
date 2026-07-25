@@ -288,27 +288,29 @@ export default function AboutSection() {
             </h3>
             <div className="w-full space-y-4 max-w-md">
               {/* Friday Special Timings */}
-              <div className="p-3.5 rounded-xl bg-amber-500/15 border border-amber-400/40 text-left">
-                <div className="flex items-center justify-between mb-1.5">
-                  <span className="text-xs uppercase font-extrabold tracking-wider text-amber-300">
+              <div className="p-4 rounded-xl bg-amber-500/15 border border-amber-400/40 text-center flex flex-col items-center justify-center">
+                <div className="flex items-center justify-center mb-1.5 w-full text-center">
+                  <span className="text-xs uppercase font-extrabold tracking-wider text-amber-300 text-center block w-full">
                     🌟 Friday Special Darshan (Sukra Hora)
                   </span>
                 </div>
-                <div className="flex justify-between items-center text-xs sm:text-sm font-semibold text-gray-200">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-xs sm:text-sm font-semibold text-gray-200 text-center w-full">
                   <span>Morning: <strong className="text-amber-300">{temple.timings.friday.morning}</strong></span>
+                  <span className="hidden sm:inline text-amber-400">•</span>
                   <span>Evening: <strong className="text-amber-300">{temple.timings.friday.evening}</strong></span>
                 </div>
               </div>
 
               {/* Normal Days Timings */}
-              <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 text-left">
-                <div className="flex items-center justify-between mb-1.5">
-                  <span className="text-xs uppercase font-extrabold tracking-wider text-gray-300">
+              <div className="p-4 rounded-xl bg-white/5 border border-white/10 text-center flex flex-col items-center justify-center">
+                <div className="flex items-center justify-center mb-1.5 w-full text-center">
+                  <span className="text-xs uppercase font-extrabold tracking-wider text-gray-300 text-center block w-full">
                     📅 Normal Days (Mon — Thu, Sat, Sun)
                   </span>
                 </div>
-                <div className="flex justify-between items-center text-xs sm:text-sm font-semibold text-gray-200">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-xs sm:text-sm font-semibold text-gray-200 text-center w-full">
                   <span>Morning: <strong className="text-amber-300">{temple.timings.normalDays.morning}</strong></span>
+                  <span className="hidden sm:inline text-amber-400">•</span>
                   <span>Evening: <strong className="text-amber-300">{temple.timings.normalDays.evening}</strong></span>
                 </div>
               </div>
