@@ -12,7 +12,6 @@ export default function Footer() {
     { label: t('nav.about'), href: '#about' },
     { label: t('nav.history'), href: '#history' },
     { label: t('nav.gallery'), href: '#gallery' },
-    { label: t('nav.donate'), href: '#donation' },
     { label: t('nav.contact'), href: '#contact' },
     { label: t('nav.reviews'), href: '#reviews' },
   ];

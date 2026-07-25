@@ -10,7 +10,6 @@ const navLinks = [
   { key: 'history', href: '#history' },
   { key: 'gallery', href: '#gallery' },
   { key: 'video', href: '#video' },
-  { key: 'donate', href: '#donation' },
   { key: 'contact', href: '#contact' },
   { key: 'reviews', href: '#reviews' },
 ];

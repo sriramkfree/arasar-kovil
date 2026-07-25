@@ -14,7 +14,6 @@ const HistoryTimeline = dynamic(() => import('@/components/history/HistoryTimeli
 const GallerySection = dynamic(() => import('@/components/gallery/GallerySection'), { ssr: false });
 const VideoSection = dynamic(() => import('@/components/video/VideoSection'), { ssr: false });
 const FestivalsAndFAQ = dynamic(() => import('@/components/festivals/FestivalsAndFAQ'), { ssr: false });
-const DonationSection = dynamic(() => import('@/components/donation/DonationSection'), { ssr: false });
 const ContactSection = dynamic(() => import('@/components/contact/ContactSection'), { ssr: false });
 const ReviewsSection = dynamic(() => import('@/components/reviews/ReviewsSection'), { ssr: false });
 const Footer = dynamic(() => import('@/components/footer/Footer'), { ssr: false });
@@ -79,7 +78,6 @@ function TempleWebsite() {
           <GallerySection />
           <VideoSection />
           <FestivalsAndFAQ />
-          <DonationSection />
           <ContactSection />
           <ReviewsSection />
           <Footer />
