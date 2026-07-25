@@ -18,17 +18,17 @@
     }
   },
   "timings": {
-    "morning": {
-      "open": "07:30 AM",
-      "close": "12:00 PM"
+    "friday": {
+      "morning": "06:00 AM — 12:00 PM",
+      "evening": "04:00 PM — 07:30 PM"
     },
-    "evening": {
-      "open": "04:00 PM",
-      "close": "07:30 PM"
+    "normalDays": {
+      "morning": "10:00 AM — 12:00 PM",
+      "evening": "04:00 PM — 07:30 PM"
     },
     "note": {
-      "en": "Temple is located in a village. Please contact the priests in advance to confirm timings before your visit.",
-      "ta": "கோவில் கிராமத்தில் அமைந்துள்ளது. வருகைக்கு முன் நேரத்தை உறுதிப்படுத்த புரோகிதர்களை தொடர்பு கொள்ளவும்."
+      "en": "Fridays open early at 6:00 AM for Sukra Hora Thirumanjanam. On all other days (Mon-Thu, Sat, Sun), morning darshan is from 10:00 AM to 12:00 PM.",
+      "ta": "வெள்ளிக்கிழமைகளில் சுக்கிர ஹோரா திருமஞ்சனத்திற்காக காலை 6:00 மணிக்கே திறக்கப்படுகிறது. மற்ற நாட்களில் (திங்கள்-வியாழன், சனி, ஞாயிறு) காலை தரிசனம் 10:00 AM முதல் 12:00 PM வரை."
     }
   },
   "deities": [

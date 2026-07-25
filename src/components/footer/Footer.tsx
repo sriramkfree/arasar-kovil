@@ -120,17 +120,17 @@ export default function Footer() {
             >
               {t('footer.visitingHours')}
             </h3>
-            <div className="space-y-2">
-              <div className="flex justify-between text-sm">
-                <span style={{ color: 'var(--text-muted)' }}>{t('about.morning')}</span>
+            <div className="space-y-2.5">
+              <div className="flex flex-col text-xs space-y-0.5">
+                <span className="font-bold text-amber-300">Friday Special (Sukra Hora):</span>
                 <span style={{ color: 'var(--text-secondary)' }}>
-                  {temple.timings.morning.open} — {temple.timings.morning.close}
+                  Morning: {temple.timings.friday.morning} | Evening: {temple.timings.friday.evening}
                 </span>
               </div>
-              <div className="flex justify-between text-sm">
-                <span style={{ color: 'var(--text-muted)' }}>{t('about.evening')}</span>
+              <div className="flex flex-col text-xs space-y-0.5 pt-1">
+                <span className="font-bold text-gray-300">Normal Days (Mon-Thu, Sat, Sun):</span>
                 <span style={{ color: 'var(--text-secondary)' }}>
-                  {temple.timings.evening.open} — {temple.timings.evening.close}
+                  Morning: {temple.timings.normalDays.morning} | Evening: {temple.timings.normalDays.evening}
                 </span>
               </div>
             </div>

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '@/i18n/LanguageContext';
-import { Menu, X, Globe, Sparkles } from 'lucide-react';
+import { Menu, X, Globe, Sparkles, Sun, Moon } from 'lucide-react';
 
 const navLinks = [
   { key: 'about', href: '#about' },
@@ -19,6 +19,7 @@ export default function Navbar() {
   const { t, lang, setLang } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -98,17 +99,21 @@ export default function Navbar() {
 
           {/* Right controls */}
           <div className="flex items-center gap-2.5 sm:gap-3.5">
-            {/* Donate Quick CTA */}
-            <a
-              href="#donation"
-              onClick={(e) => handleClick(e, '#donation')}
-              className="hidden sm:flex btn-gold !px-4 !py-2 !text-xs font-bold items-center gap-1.5 shadow-md"
+            {/* Theme Toggle (Light / Dark mode) */}
+            <button
+              onClick={() => {
+                const nextTheme = theme === 'dark' ? 'light' : 'dark';
+                setTheme(nextTheme);
+                document.documentElement.setAttribute('data-theme', nextTheme);
+              }}
+              className="btn-glass !p-2.5 !text-xs font-bold flex items-center justify-center border-amber-500/30 bg-white/5 hover:bg-amber-500/10 active:scale-95 transition-all text-amber-300 rounded-xl"
+              title={theme === 'dark' ? 'Switch to Light Theme' : 'Switch to Dark Theme'}
+              aria-label="Toggle Theme"
             >
-              <Sparkles size={14} />
-              <span>{t('nav.donate')}</span>
-            </a>
+              {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
 
-            {/* Language toggle (Prominent & Easy to tap) */}
+            {/* Language toggle (Tamil / English) */}
             <button
               onClick={() => setLang(lang === 'en' ? 'ta' : 'en')}
               className="btn-glass !px-3.5 !py-2.5 !text-xs sm:!text-sm font-bold flex items-center gap-2 border-amber-500/30 bg-white/5 hover:bg-amber-500/10 active:scale-95 transition-all"

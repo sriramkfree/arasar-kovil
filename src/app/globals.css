@@ -49,6 +49,25 @@
   --font-tamil: 'Noto Sans Tamil', sans-serif;
 }
 
+[data-theme="light"] {
+  --bg-deep: #FAF8F2;
+  --bg-primary: #F4EFE6;
+  --bg-elevated: #FFFFFF;
+  --bg-glass: rgba(0, 0, 0, 0.04);
+
+  --text-primary: #1A1712;
+  --text-secondary: #4A4335;
+  --text-muted: #6B6252;
+  --text-accent: #9E7412;
+
+  --border-subtle: rgba(184, 139, 36, 0.25);
+  --border-glass: rgba(0, 0, 0, 0.1);
+  --border-liquid: rgba(184, 139, 36, 0.5);
+
+  --shadow-liquid: 0 15px 40px rgba(0, 0, 0, 0.08), 0 0 30px rgba(184, 139, 36, 0.12);
+  --shadow-glow-gold: 0 0 40px rgba(184, 139, 36, 0.25);
+}
+
 /* =========================================
    BASE RESET & CENTERING
    ========================================= */

@@ -287,17 +287,30 @@ export default function AboutSection() {
               {t('about.timingsTitle')}
             </h3>
             <div className="w-full space-y-4 max-w-md">
-              <div className="flex justify-between items-center py-3 border-b" style={{ borderColor: 'var(--border-subtle)' }}>
-                <span className="text-sm text-gray-300">{t('about.morning')}</span>
-                <span className="font-bold text-sm text-amber-300">
-                  {temple.timings.morning.open} — {temple.timings.morning.close}
-                </span>
+              {/* Friday Special Timings */}
+              <div className="p-3.5 rounded-xl bg-amber-500/15 border border-amber-400/40 text-left">
+                <div className="flex items-center justify-between mb-1.5">
+                  <span className="text-xs uppercase font-extrabold tracking-wider text-amber-300">
+                    🌟 Friday Special Darshan (Sukra Hora)
+                  </span>
+                </div>
+                <div className="flex justify-between items-center text-xs sm:text-sm font-semibold text-gray-200">
+                  <span>Morning: <strong className="text-amber-300">{temple.timings.friday.morning}</strong></span>
+                  <span>Evening: <strong className="text-amber-300">{temple.timings.friday.evening}</strong></span>
+                </div>
               </div>
-              <div className="flex justify-between items-center py-3 border-b" style={{ borderColor: 'var(--border-subtle)' }}>
-                <span className="text-sm text-gray-300">{t('about.evening')}</span>
-                <span className="font-bold text-sm text-amber-300">
-                  {temple.timings.evening.open} — {temple.timings.evening.close}
-                </span>
+
+              {/* Normal Days Timings */}
+              <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 text-left">
+                <div className="flex items-center justify-between mb-1.5">
+                  <span className="text-xs uppercase font-extrabold tracking-wider text-gray-300">
+                    📅 Normal Days (Mon — Thu, Sat, Sun)
+                  </span>
+                </div>
+                <div className="flex justify-between items-center text-xs sm:text-sm font-semibold text-gray-200">
+                  <span>Morning: <strong className="text-amber-300">{temple.timings.normalDays.morning}</strong></span>
+                  <span>Evening: <strong className="text-amber-300">{temple.timings.normalDays.evening}</strong></span>
+                </div>
               </div>
             </div>
             <p className="mt-6 text-xs flex items-center justify-center gap-2 text-center text-gray-400">

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/i18n/LanguageContext';
-import { Play, ExternalLink, Youtube } from 'lucide-react';
+import { Play, ExternalLink, Film } from 'lucide-react';
 import Image from 'next/image';
 
 export default function VideoSection() {
@@ -85,7 +85,7 @@ export default function VideoSection() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-amber-200 bg-amber-500/15 border border-amber-400/40 hover:bg-amber-500/30 transition-all duration-300 shadow-lg hover:scale-105"
           >
-            <Youtube size={18} className="text-red-500" />
+            <Film size={18} className="text-amber-400" />
             <span>Watch Directly on YouTube</span>
             <ExternalLink size={14} className="text-amber-400" />
           </a>
