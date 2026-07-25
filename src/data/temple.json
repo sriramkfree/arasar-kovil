@@ -1,0 +1,254 @@
+{
+  "temple": {
+    "name": {
+      "en": "Arasar Kovil — Kamala Varadharajar Perumal Temple",
+      "ta": "அரசர் கோவில் — கமல வரதராஜர் பெருமாள் திருக்கோவில்"
+    },
+    "subtitle": {
+      "en": "Sundara Mahalakshmi Temple",
+      "ta": "சுந்தர மகாலட்சுமி திருக்கோவில்"
+    },
+    "tagline": {
+      "en": "Where the Divine Goddess Controls the Stars",
+      "ta": "தெய்வீக அன்னை நட்சத்திரங்களை ஆளும் இடம்"
+    },
+    "description": {
+      "en": "An ancient temple on the banks of the Palar River, where Goddess Sundara Mahalakshmi — with her sacred six-toed foot — blesses devotees with prosperity, and Lord Kamala Varadharajar stands gracefully holding a lotus. This is the King's Temple, where even the divine once came to worship.",
+      "ta": "பாலாற்றின் கரையில் அமைந்த பழமையான கோவில், சுந்தர மகாலட்சுமி தேவி — தனது புனித ஆறு விரல் பாதத்துடன் — பக்தர்களுக்கு செழிப்பை அருள்கிறாள், கமல வரதராஜர் தாமரை ஏந்தி நிற்கிறார். இது அரசர் கோவில், தெய்வமே வந்து வழிபட்ட இடம்."
+    }
+  },
+  "timings": {
+    "morning": {
+      "open": "07:30 AM",
+      "close": "12:00 PM"
+    },
+    "evening": {
+      "open": "04:00 PM",
+      "close": "07:30 PM"
+    },
+    "note": {
+      "en": "Temple is located in a village. Please contact the priests in advance to confirm timings before your visit.",
+      "ta": "கோவில் கிராமத்தில் அமைந்துள்ளது. வருகைக்கு முன் நேரத்தை உறுதிப்படுத்த புரோகிதர்களை தொடர்பு கொள்ளவும்."
+    }
+  },
+  "deities": [
+    {
+      "name": { "en": "Kamala Varadharajar Perumal", "ta": "கமல வரதராஜர் பெருமாள்" },
+      "description": { "en": "The presiding deity, Lord Vishnu in standing posture holding a lotus flower (Kamala). He is the bestower of boons (Varadharaja).", "ta": "கோவிலின் முதன்மை மூர்த்தி, நிற்கும் கோலத்தில் தாமரை (கமலம்) ஏந்திய விஷ்ணு பகவான். வரங்களை அருளும் வரதராஜர்." },
+      "image": "/images/deity-vishnu.png"
+    },
+    {
+      "name": { "en": "Sundara Mahalakshmi", "ta": "சுந்தர மகாலட்சுமி" },
+      "description": { "en": "The Goddess with the sacred six-toed right foot, symbolizing her divine control over Shukra (Venus). She is the root form of the 64 manifestations of Goddess Lakshmi.", "ta": "ஆறு விரல் கொண்ட புனித வலது பாதத்துடன் கூடிய தேவி, சுக்கிரன் (வெள்ளி) மீதான தெய்வீக ஆதிக்கத்தின் அடையாளம். லட்சுமி தேவியின் 64 வடிவங்களின் மூல ரூபம்." },
+      "image": "/images/goddess-lakshmi.png"
+    },
+    {
+      "name": { "en": "Akshaya Ganapathi", "ta": "அக்ஷய கணபதி" },
+      "description": { "en": "Lord Ganesha who blessed Hanuman with the Akshaya Patra — the vessel of inexhaustible food and wealth.", "ta": "அனுமனுக்கு அக்ஷய பாத்திரத்தை — முடிவில்லா உணவு மற்றும் செல்வத்தின் பாத்திரத்தை — வழங்கிய கணபதி." },
+      "image": "/images/temple-entrance.png"
+    }
+  ],
+  "uniqueFeatures": [
+    {
+      "title": { "en": "The Six-Toed Goddess", "ta": "ஆறு விரல் கொண்ட தேவி" },
+      "description": { "en": "The idol of Goddess Sundara Mahalakshmi uniquely has six toes on her right foot. The number six represents Shukra (Venus), and this form symbolizes the Goddess's supreme control over wealth, luxury, and prosperity.", "ta": "சுந்தர மகாலட்சுமி தேவியின் சிலை தனித்துவமாக வலது காலில் ஆறு விரல்களைக் கொண்டுள்ளது. ஆறு என்ற எண் சுக்கிரனை (வெள்ளி) குறிக்கிறது, இந்த வடிவம் செல்வம், ஆடம்பரம் மற்றும் செழிப்பு ஆகியவற்றின் மீதான தேவியின் உன்னத ஆதிக்கத்தை குறிக்கிறது." },
+      "icon": "sparkles"
+    },
+    {
+      "title": { "en": "Musical Stone Pillars", "ta": "இசை தூண்கள்" },
+      "description": { "en": "The temple's mandapam features extraordinary stone pillars that produce distinct musical notes when struck — a marvel of ancient Dravidian architecture and acoustical engineering.", "ta": "கோவிலின் மண்டபத்தில் உள்ள அசாதாரண கல் தூண்கள் தட்டும்போது தனித்துவமான இசை ஒலிகளை உருவாக்குகின்றன — பண்டைய திராவிட கட்டிடக்கலை மற்றும் ஒலி பொறியியலின் அற்புதம்." },
+      "icon": "music"
+    },
+    {
+      "title": { "en": "Shukra Parihara Sthalam", "ta": "சுக்கிர பரிகார ஸ்தலம்" },
+      "description": { "en": "This is one of the most powerful temples for remedying Venus-related planetary afflictions. Lord Shukra himself is believed to worship the Goddess here every Friday.", "ta": "சுக்கிரன் சம்பந்தமான கிரக தோஷங்களை நிவர்த்தி செய்வதற்கான மிக சக்திவாய்ந்த கோவில்களில் ஒன்று. ஒவ்வொரு வெள்ளிக்கிழமையும் சுக்கிர பகவானே இங்கு தேவியை வழிபடுவதாக நம்பப்படுகிறது." },
+      "icon": "star"
+    }
+  ],
+  "history": {
+    "intro": {
+      "en": "The name 'Arasar Kovil' means 'King's Temple'. Legend says King Janaka used to worship Lord Vishnu here daily. One day when the King could not come, the Lord himself appeared to perform the rituals. Vishwakarma, the architect of the gods, then built this magnificent temple.",
+      "ta": "'அரசர் கோவில்' என்பதன் பொருள் 'அரசனின் கோவில்'. ஜனக மகாராஜா தினமும் இங்கு விஷ்ணு பகவானை வழிபட்டதாக புராணம் கூறுகிறது. ஒரு நாள் அரசர் வர இயலாதபோது, பகவானே வந்து வழிபாடு செய்தார். பின்னர் தேவர்களின் கட்டிடக் கலைஞர் விஸ்வகர்மா இந்த அற்புத கோவிலை கட்டினார்."
+    },
+    "timeline": [
+      {
+        "era": { "en": "Ancient Origins", "ta": "பண்டைய தோற்றம்" },
+        "period": { "en": "Puranic Era", "ta": "புராண காலம்" },
+        "description": { "en": "King Janaka establishes worship of Lord Vishnu at this sacred site on the banks of the Palar River. Lord Vishnu himself appears, and the divine architect Vishwakarma constructs the temple.", "ta": "ஜனக மகாராஜா பாலாற்றின் கரையில் உள்ள இந்த புனித இடத்தில் விஷ்ணு வழிபாட்டை நிறுவுகிறார். விஷ்ணு பகவானே தோன்றுகிறார், தெய்வீக கட்டிடக் கலைஞர் விஸ்வகர்மா கோவிலை கட்டுகிறார்."
+        }
+      },
+      {
+        "era": { "en": "Chola Dynasty", "ta": "சோழ வம்சம்" },
+        "period": { "en": "9th — 13th Century", "ta": "9 — 13ஆம் நூற்றாண்டு" },
+        "description": { "en": "The temple receives significant architectural development under the Chola rulers. Inscriptions from Rajaraja Chola III document the temple's importance. The village becomes a Chaturvedi Mangalam — gifted to Vedic scholars.", "ta": "சோழ அரசர்களின் கீழ் கோவில் குறிப்பிடத்தக்க கட்டிடக்கலை வளர்ச்சியை பெறுகிறது. ராஜராஜ சோழன் III இன் கல்வெட்டுகள் கோவிலின் முக்கியத்துவத்தை பதிவு செய்கின்றன."
+        }
+      },
+      {
+        "era": { "en": "Pandya Era", "ta": "பாண்டிய காலம்" },
+        "period": { "en": "13th — 14th Century", "ta": "13 — 14ஆம் நூற்றாண்டு" },
+        "description": { "en": "Sundara Pandyan's inscriptions are found at the temple, indicating continued royal patronage and religious significance during the Pandya period.", "ta": "சுந்தர பாண்டியனின் கல்வெட்டுகள் கோவிலில் காணப்படுகின்றன, பாண்டிய காலத்தில் தொடர்ச்சியான அரச ஆதரவையும் மத முக்கியத்துவத்தையும் குறிக்கின்றன."
+        }
+      },
+      {
+        "era": { "en": "Vijayanagara Period", "ta": "விஜயநகர காலம்" },
+        "period": { "en": "14th — 17th Century", "ta": "14 — 17ஆம் நூற்றாண்டு" },
+        "description": { "en": "The Vijayanagara Empire contributes further architectural enhancements. The iconic musical stone pillars in the mandapam are believed to date from this period.", "ta": "விஜயநகர பேரரசு மேலும் கட்டிடக்கலை மேம்பாடுகளை செய்கிறது. மண்டபத்தில் உள்ள சிறப்பான இசை கல் தூண்கள் இந்த காலத்தைச் சேர்ந்ததாக கருதப்படுகின்றன."
+        }
+      },
+      {
+        "era": { "en": "Modern Restoration", "ta": "நவீன புனரமைப்பு" },
+        "period": { "en": "2006 — Present", "ta": "2006 — தற்போது" },
+        "description": { "en": "After years of neglect, the temple undergoes significant reconstruction starting in 2006. The temple is restored to its former glory, and regular worship and festivals resume.", "ta": "பல ஆண்டுகள் புறக்கணிப்புக்குப் பிறகு, 2006 முதல் கோவில் குறிப்பிடத்தக்க புனரமைப்புக்கு உள்ளாகிறது. கோவில் பழைய பெருமைக்கு மீட்டெடுக்கப்பட்டு, வழக்கமான வழிபாடு மற்றும் திருவிழாக்கள் மீண்டும் தொடங்குகின்றன."
+        }
+      }
+    ]
+  },
+  "festivals": [
+    {
+      "name": { "en": "Chitra Pournami", "ta": "சித்ரா பௌர்ணமி" },
+      "description": { "en": "Full moon day in the Tamil month of Chithirai, celebrated with grand rituals and special Abhishekam.", "ta": "சித்திரை மாத பௌர்ணமி நாளில் சிறப்பு அபிஷேகம் மற்றும் பெரிய விழாவாக கொண்டாடப்படுகிறது." }
+    },
+    {
+      "name": { "en": "Varalakshmi Vratam", "ta": "வரலட்சுமி விரதம்" },
+      "description": { "en": "Celebrated with special pujas for Goddess Lakshmi, seeking blessings for wealth and prosperity.", "ta": "செல்வம் மற்றும் செழிப்புக்காக லட்சுமி தேவிக்கு சிறப்பு பூஜைகளுடன் கொண்டாடப்படுகிறது." }
+    },
+    {
+      "name": { "en": "Akshaya Tritiya", "ta": "அக்ஷய திருதியை" },
+      "description": { "en": "One of the most auspicious days for new beginnings and prosperity. Special connection to the temple's Akshaya Ganapathi.", "ta": "புதிய தொடக்கங்கள் மற்றும் செழிப்புக்கான மிக புனித நாள்களில் ஒன்று. கோவிலின் அக்ஷய கணபதியுடன் சிறப்பு தொடர்பு." }
+    },
+    {
+      "name": { "en": "Aadi & Thai Friday Specials", "ta": "ஆடி & தை வெள்ளி சிறப்பு" },
+      "description": { "en": "Fridays during the sacred Tamil months of Aadi and Thai are observed with special Abhishekam and prayers.", "ta": "புனித தமிழ் மாதங்களான ஆடி மற்றும் தை வெள்ளிக்கிழமைகளில் சிறப்பு அபிஷேகம் மற்றும் பிரார்த்தனைகள் நடைபெறுகின்றன." }
+    }
+  ],
+  "poojas": {
+    "daily": [
+      { "name": { "en": "Morning Pooja", "ta": "காலை பூஜை" }, "time": "7:30 AM" },
+      { "name": { "en": "Uchikala Pooja", "ta": "உச்சிகால பூஜை" }, "time": "12:00 PM" },
+      { "name": { "en": "Evening Pooja", "ta": "மாலை பூஜை" }, "time": "6:00 PM" }
+    ],
+    "special": [
+      { "name": { "en": "Sukra Hora Pooja (Venus Hour)", "ta": "சுக்கிர ஹோரா பூஜை" }, "time": { "en": "Fridays, 6:00 AM — 7:00 AM", "ta": "வெள்ளிக்கிழமை, காலை 6:00 — 7:00" } },
+      { "name": { "en": "Sunday Special Darshan", "ta": "ஞாயிறு சிறப்பு தரிசனம்" }, "time": { "en": "Sundays, 4:30 PM — 6:00 PM", "ta": "ஞாயிற்றுக்கிழமை, மாலை 4:30 — 6:00" } }
+    ],
+    "tradition": {
+      "en": "It is customary to worship Goddess Sundara Mahalakshmi first before offering prayers to the presiding deity Lord Kamala Varadharajar.",
+      "ta": "முதன்மை மூர்த்தியான கமல வரதராஜர் பெருமாளுக்கு பிரார்த்தனை செய்வதற்கு முன் சுந்தர மகாலட்சுமி தேவியை முதலில் வழிபடுவது வழக்கமாகும்."
+    }
+  },
+  "dressCode": {
+    "en": "Traditional attire is recommended. Men: Dhoti/Veshti and shirt. Women: Saree or Salwar. Remove footwear before entering the temple premises.",
+    "ta": "பாரம்பரிய ஆடை அணிய பரிந்துரைக்கப்படுகிறது. ஆண்கள்: வேட்டி மற்றும் சட்டை. பெண்கள்: புடவை அல்லது சல்வார். கோவில் வளாகத்தில் நுழைவதற்கு முன் செருப்புகளை கழற்றவும்."
+  },
+  "visitorInstructions": [
+    { "en": "Contact temple priests before your visit to confirm timings", "ta": "நேரத்தை உறுதிப்படுத்த உங்கள் வருகைக்கு முன் கோவில் புரோகிதர்களை தொடர்பு கொள்ளவும்" },
+    { "en": "Worship Goddess Sundara Mahalakshmi first", "ta": "முதலில் சுந்தர மகாலட்சுமி தேவியை வழிபடுங்கள்" },
+    { "en": "Fridays during Sukra Hora are most auspicious", "ta": "சுக்கிர ஹோரா நேரத்தில் வெள்ளிக்கிழமைகள் மிகவும் புனிதமானவை" },
+    { "en": "Photography may be restricted in sanctum", "ta": "கருவறையில் புகைப்படம் எடுப்பது தடை செய்யப்படலாம்" },
+    { "en": "Carry offerings: flowers, fruits, coconut, and oil for lamps", "ta": "காணிக்கைகளை எடுத்து வாருங்கள்: பூக்கள், பழங்கள், தேங்காய், மற்றும் விளக்கெண்ணெய்" }
+  ],
+  "contact": {
+    "priests": [
+      {
+        "name": { "en": "Kannan Bhattacharyar", "ta": "கண்ணன் பட்டாச்சார்யார்" },
+        "phone": "+91 96985 10956",
+        "role": { "en": "Temple Priest", "ta": "கோவில் புரோகிதர்" }
+      }
+    ],
+    "email": "[TEMPLE EMAIL — Update when available]",
+    "whatsapp": "+91 96985 10956",
+    "address": {
+      "en": "Arasar Koil, Madurantakam Taluk, Chengalpattu District, Tamil Nadu — 603 308, India",
+      "ta": "அரசர் கோவில், மதுராந்தகம் தாலுகா, செங்கல்பட்டு மாவட்டம், தமிழ்நாடு — 603 308, இந்தியா"
+    },
+    "googleMapsUrl": "https://www.google.com/maps/place/Arasar+Koil,+Tamil+Nadu",
+    "googleMapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.5!2d79.95!3d12.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sArasar+Koil!5e0!3m2!1sen!2sin!4v1234567890"
+  },
+  "location": {
+    "distance": {
+      "en": "~20 km from Chengalpattu, ~70 km from Chennai",
+      "ta": "செங்கல்பட்டிலிருந்து ~20 கி.மீ., சென்னையிலிருந்து ~70 கி.மீ."
+    },
+    "directions": {
+      "en": "From Chennai, take the GST Highway (NH45) towards Chengalpattu. Turn at Padalam Koot Road junction. The temple is approximately 6-7 km from the junction. Share autos and local transport available from Padalam.",
+      "ta": "சென்னையிலிருந்து, GST நெடுஞ்சாலை (NH45) வழியாக செங்கல்பட்டு நோக்கி செல்லுங்கள். படாலம் கூட் ரோடு சந்திப்பில் திரும்புங்கள். சந்திப்பிலிருந்து கோவில் சுமார் 6-7 கி.மீ. தொலைவில் உள்ளது."
+    },
+    "nearbyAttractions": [
+      { "en": "Chengalpattu Fort", "ta": "செங்கல்பட்டு கோட்டை" },
+      { "en": "Kolavai Lake", "ta": "கொளவாய் ஏரி" },
+      { "en": "Madurantakam Bird Sanctuary", "ta": "மதுராந்தகம் பறவைகள் சரணாலயம்" },
+      { "en": "Vedanthangal Bird Sanctuary", "ta": "வேடந்தாங்கல் பறவைகள் சரணாலயம்" }
+    ]
+  },
+  "donation": {
+    "title": { "en": "Temple Donation", "ta": "கோவில் நன்கொடை" },
+    "description": { "en": "Your generous contribution helps maintain the temple, conduct daily poojas, and celebrate festivals. Every offering is a blessing.", "ta": "உங்கள் தாராள பங்களிப்பு கோவிலை பராமரிக்கவும், தினசரி பூஜைகளை நடத்தவும், திருவிழாக்களை கொண்டாடவும் உதவுகிறது. ஒவ்வொரு காணிக்கையும் ஒரு ஆசீர்வாதம்." },
+    "upiId": "sriram28@fam",
+    "qrCodeImage": "/images/qr-placeholder.png",
+    "thankYou": { "en": "May the Goddess bless you abundantly 🙏", "ta": "தேவி உங்களை மிகுதியாக ஆசீர்வதிக்கட்டும் 🙏" }
+  },
+  "video": {
+    "youtubeUrl": "https://youtu.be/2Tc6Y8otMJ0?si=8IzvHaIz0tfExKHT",
+    "title": { "en": "Experience Arasar Kovil", "ta": "அரசர் கோவிலை அனுபவியுங்கள்" },
+    "description": { "en": "Watch the divine beauty and spiritual atmosphere of the ancient temple.", "ta": "பழமையான கோவிலின் தெய்வீக அழகையும் ஆன்மீக சூழலையும் காணுங்கள்." }
+  },
+  "reviews": {
+    "averageRating": 4.7,
+    "totalReviews": 342,
+    "googleUrl": "https://www.google.com/maps/place/Arasar+Koil/reviews",
+    "sampleReviews": [
+      {
+        "author": "Ramesh K.",
+        "rating": 5,
+        "text": { "en": "A truly divine experience. The musical pillars are a marvel of ancient engineering. The spiritual energy here is palpable.", "ta": "உண்மையிலேயே ஒரு தெய்வீக அனுபவம். இசை தூண்கள் பண்டைய பொறியியலின் அற்புதம். இங்குள்ள ஆன்மீக சக்தி உணரக்கூடியது." },
+        "date": "2024-12-15"
+      },
+      {
+        "author": "Priya S.",
+        "rating": 5,
+        "text": { "en": "Beautiful temple with immense spiritual significance. The six-toed Lakshmi idol is truly unique. Must visit for Shukra dosha parihara.", "ta": "பெரும் ஆன்மீக முக்கியத்துவம் கொண்ட அழகான கோவில். ஆறு விரல் லட்சுமி சிலை உண்மையிலேயே தனித்துவமானது. சுக்கிர தோஷ பரிகாரத்திற்கு கண்டிப்பாக வரவும்." },
+        "date": "2024-11-28"
+      },
+      {
+        "author": "Venkatesh R.",
+        "rating": 4,
+        "text": { "en": "Ancient temple with rich history. The reconstruction work is commendable. Road access could be better, but the divine darshan makes it worthwhile.", "ta": "வளமான வரலாறு கொண்ட பழமையான கோவில். புனரமைப்பு பணி பாராட்டத்தக்கது. சாலை வசதி மேம்படுத்தப்படலாம், ஆனால் தெய்வீக தரிசனம் பயணத்திற்கு மதிப்புள்ளதாக ஆக்குகிறது." },
+        "date": "2024-10-05"
+      },
+      {
+        "author": "Lakshmi N.",
+        "rating": 5,
+        "text": { "en": "My family visits every Friday during Sukra Hora. The peaceful atmosphere and the blessings of Sundara Mahalakshmi are incomparable.", "ta": "என் குடும்பம் ஒவ்வொரு வெள்ளியும் சுக்கிர ஹோரா நேரத்தில் வருகிறது. அமைதியான சூழலும் சுந்தர மகாலட்சுமியின் ஆசீர்வாதமும் ஒப்பிட முடியாதவை." },
+        "date": "2025-01-20"
+      },
+      {
+        "author": "Arvind M.",
+        "rating": 5,
+        "text": { "en": "One of the hidden gems of Tamil Nadu. The Chola-era inscriptions and the musical pillars make this a must-visit for history enthusiasts.", "ta": "தமிழ்நாட்டின் மறைந்த முத்துக்களில் ஒன்று. சோழ கால கல்வெட்டுகளும் இசை தூண்களும் வரலாற்று ஆர்வலர்களுக்கு இது கண்டிப்பாக பார்க்க வேண்டிய இடம்." },
+        "date": "2025-03-10"
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": { "en": "What is the significance of the six-toed Lakshmi?", "ta": "ஆறு விரல் லட்சுமியின் முக்கியத்துவம் என்ன?" },
+      "a": { "en": "The six toes represent the number associated with Shukra (Venus). It symbolizes Goddess Lakshmi's supreme control over Venus, making this temple a powerful Shukra Parihara Sthalam for remedying Venus-related afflictions.", "ta": "ஆறு விரல்கள் சுக்கிரனுடன் தொடர்புடைய எண்ணைக் குறிக்கின்றன. இது சுக்கிரன் மீதான லட்சுமி தேவியின் உன்னத ஆதிக்கத்தை குறிக்கிறது, இது இந்த கோவிலை சுக்கிரன் சம்பந்தமான தோஷங்களுக்கு பரிகாரம் செய்யும் சக்திவாய்ந்த ஸ்தலமாக ஆக்குகிறது." }
+    },
+    {
+      "q": { "en": "What are the best days and times to visit?", "ta": "வருகைக்கு சிறந்த நாட்கள் மற்றும் நேரங்கள் என்ன?" },
+      "a": { "en": "Fridays during Sukra Hora (6:00 AM - 7:00 AM) are considered most auspicious. Sundays between 4:30 PM - 6:00 PM are also recommended. Always contact the temple priests before visiting.", "ta": "சுக்கிர ஹோரா நேரத்தில் (காலை 6:00 - 7:00) வெள்ளிக்கிழமைகள் மிகவும் புனிதமாக கருதப்படுகின்றன. ஞாயிற்றுக்கிழமை மாலை 4:30 - 6:00 மணி இடையேயும் பரிந்துரைக்கப்படுகிறது." }
+    },
+    {
+      "q": { "en": "How to reach Arasar Kovil from Chennai?", "ta": "சென்னையிலிருந்து அரசர் கோவிலை எப்படி அடைவது?" },
+      "a": { "en": "Take the GST Highway (NH45) from Chennai towards Chengalpattu (~60 km). Turn at Padalam Koot Road junction. The temple is about 6-7 km from there. Total distance is approximately 70 km from Chennai.", "ta": "சென்னையிலிருந்து GST நெடுஞ்சாலை (NH45) வழியாக செங்கல்பட்டு நோக்கி (~60 கி.மீ.) செல்லுங்கள். படாலம் கூட் ரோடு சந்திப்பில் திரும்புங்கள். அங்கிருந்து கோவில் சுமார் 6-7 கி.மீ. தொலைவில்." }
+    },
+    {
+      "q": { "en": "Is there accommodation near the temple?", "ta": "கோவிலுக்கு அருகில் தங்கும் வசதி உள்ளதா?" },
+      "a": { "en": "Being a village temple, direct accommodation is limited. Chengalpattu town (~20 km away) has hotels and lodges. It's recommended as a day trip from Chennai.", "ta": "கிராம கோவிலாக இருப்பதால், நேரடி தங்கும் வசதி குறைவு. செங்கல்பட்டு நகரில் (~20 கி.மீ. தொலைவில்) ஓட்டல்கள் மற்றும் லாட்ஜ்கள் உள்ளன. சென்னையிலிருந்து ஒரு நாள் பயணமாக பரிந்துரைக்கப்படுகிறது." }
+    }
+  ],
+  "blessing": {
+    "en": "ॐ May Goddess Sundara Mahalakshmi bless you with eternal prosperity and peace. May Lord Kamala Varadharajar shower his divine grace upon you. 🙏",
+    "ta": "ॐ சுந்தர மகாலட்சுமி தேவி உங்களுக்கு நிரந்தர செழிப்பையும் அமைதியையும் அருளட்டும். கமல வரதராஜர் பெருமாள் தனது தெய்வீக அருளை உங்கள் மீது பொழியட்டும். 🙏"
+  }
+}

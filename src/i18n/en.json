@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "history": "History",
+    "gallery": "Gallery",
+    "video": "Video",
+    "donate": "Donate",
+    "contact": "Contact",
+    "reviews": "Reviews"
+  },
+  "language": {
+    "title": "Choose Language",
+    "subtitle": "Select your preferred language",
+    "english": "English",
+    "tamil": "தமிழ்"
+  },
+  "loading": {
+    "text": "Entering the Sacred Temple...",
+    "subtext": "Arasar Kovil"
+  },
+  "hero": {
+    "scroll": "Scroll to explore",
+    "discover": "Discover the Divine"
+  },
+  "about": {
+    "title": "The Sacred Temple",
+    "subtitle": "Where divinity meets ancient wisdom",
+    "timingsTitle": "Temple Timings",
+    "morning": "Morning",
+    "evening": "Evening",
+    "featuresTitle": "What Makes This Temple Unique",
+    "visitorsTitle": "Visitor Guide",
+    "dressCodeTitle": "Dress Code"
+  },
+  "history": {
+    "title": "A Timeless Legacy",
+    "subtitle": "Journey through centuries of devotion"
+  },
+  "gallery": {
+    "title": "Sacred Glimpses",
+    "subtitle": "Visual journey through the temple"
+  },
+  "video": {
+    "title": "Experience the Temple",
+    "subtitle": "Watch the divine beauty unfold",
+    "placeholder": "Video coming soon — Check back for an immersive experience"
+  },
+  "donation": {
+    "title": "Contribute to the Temple",
+    "subtitle": "Your offering sustains centuries of tradition",
+    "selectPurpose": "Select Donation Purpose",
+    "selectAmount": "Select or Enter Amount",
+    "customAmount": "Custom Amount (₹)",
+    "scanQR": "Scan QR Code",
+    "upiId": "UPI ID",
+    "copy": "Copy UPI ID",
+    "copied": "Copied!",
+    "payViaApp": "Pay via UPI App",
+    "thankYou": "May Goddess Sundara Mahalakshmi bless your generous offering 🙏",
+    "purposes": {
+      "annadhanam": "Annadhanam (Free Meals)",
+      "pooja": "Special Pooja & Abhishekam",
+      "renovation": "Temple Maintenance & Renovation",
+      "flowers": "Flower Alankaram",
+      "deepam": "Lamp Oil (Deepam Sevai)",
+      "general": "General Temple Trust Fund"
+    }
+  },
+  "contact": {
+    "title": "Visit Us",
+    "subtitle": "Connect with the temple",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "address": "Address",
+    "getDirections": "Get Directions",
+    "nearbyTitle": "Nearby Attractions",
+    "distanceTitle": "Distance"
+  },
+  "reviews": {
+    "title": "Devotee Experiences",
+    "subtitle": "What visitors say about Arasar Kovil",
+    "writeReview": "Write a Review",
+    "basedOn": "based on",
+    "reviewsText": "reviews",
+    "rating": "Rating",
+    "modalTitle": "Share Your Experience",
+    "modalSubtitle": "Submit a review for Arasar Kovil temple",
+    "yourName": "Your Name",
+    "yourRating": "Your Rating",
+    "yourReview": "Your Devotional Review",
+    "submitBtn": "Submit Review",
+    "thankYou": "Thank you! Your review has been published 🙏"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "contactUs": "Contact Us",
+    "visitingHours": "Visiting Hours",
+    "copyright": "All rights reserved. Arasar Kovil — Kamala Varadharajar Perumal Temple."
+  },
+  "festivals": {
+    "title": "Festivals & Celebrations",
+    "subtitle": "Sacred occasions throughout the year"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know"
+  },
+  "poojas": {
+    "title": "Daily & Special Poojas",
+    "daily": "Daily Poojas",
+    "special": "Special Poojas",
+    "tradition": "Temple Tradition"
+  }
+}
