@@ -8,10 +8,11 @@ import { gsap } from '@/lib/gsapConfig';
 import { X, ZoomIn } from 'lucide-react';
 
 const galleryImages = [
-  { src: '/images/hero-temple.png', label: { en: 'Temple Gopuram Tower', ta: 'கோபுர வாயில்' }, category: 'architecture' },
-  { src: '/images/temple-entrance.png', label: { en: 'Temple Sanctum Entrance', ta: 'கோவில் நுழைவாயில்' }, category: 'architecture' },
-  { src: '/images/deity-vishnu.png', label: { en: 'Lord Kamala Varadharajar', ta: 'கமல வரதராஜர் பெருமாள்' }, category: 'deity' },
+  { src: '/images/temple-renovated.png', label: { en: 'Authentic Restored Vimana Shrines', ta: 'புனரமைக்கப்பட்ட திருப்பணி கோவில்கள்' }, category: 'architecture' },
+  { src: '/images/temple-ancient.png', label: { en: 'Pre-Restoration Chola Stone Sanctum', ta: 'பண்டைய சோழ கல்வெட்டு கோவில்' }, category: 'architecture' },
   { src: '/images/goddess-lakshmi.png', label: { en: 'Goddess Sundara Mahalakshmi (6-Toes)', ta: 'சுந்தர மகாலட்சுமி (6 விரல்கள்)' }, category: 'deity' },
+  { src: '/images/deity-vishnu.png', label: { en: 'Lord Kamala Varadharajar', ta: 'கமல வரதராஜர் பெருமாள்' }, category: 'deity' },
+  { src: '/images/temple-entrance.png', label: { en: 'Temple Sanctum Entrance', ta: 'கோவில் நுழைவாயில்' }, category: 'architecture' },
   { src: '/images/oil-lamps.png', label: { en: 'Sacred Oil Lamps (Deepam)', ta: 'புனித எண்ணெய் விளக்குகள்' }, category: 'atmosphere' },
   { src: '/images/temple-bells.png', label: { en: 'Traditional Brass Temple Bells', ta: 'கோவில் பித்தளை மணிகள்' }, category: 'architecture' },
   { src: '/images/flowers-offering.png', label: { en: 'Fresh Lotus Flower Offerings', ta: 'தாமரை மலர் காணிக்கை' }, category: 'atmosphere' },
@@ -19,8 +20,6 @@ const galleryImages = [
   { src: '/images/temple-evening.png', label: { en: 'Twilight Evening Lighting', ta: 'மாலை நேர தீப ஒளி' }, category: 'atmosphere' },
   { src: '/images/musical-pillars.png', label: { en: 'Ancient Musical Stone Pillars', ta: 'இசை கல் தூண்கள்' }, category: 'architecture' },
   { src: '/images/incense-smoke.png', label: { en: 'Volumetric Incense Smoke', ta: 'புனித தூப புகை' }, category: 'atmosphere' },
-  { src: '/images/temple-gopuram.png', label: { en: 'Intricate Gopuram Sculptures', ta: 'கோபுர சிறப்பம்சங்கள்' }, category: 'architecture' },
-  { src: '/images/aerial-temple.png', label: { en: 'Aerial View of Temple Complex', ta: 'வான்வழி கோவில் காட்சி' }, category: 'architecture' },
 ];
 
 export default function GallerySection() {

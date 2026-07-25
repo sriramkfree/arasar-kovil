@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useEffect } from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { gsap } from '@/lib/gsapConfig';
@@ -98,7 +99,7 @@ export default function HistoryTimeline() {
 
         {/* Intro Legend Card */}
         <motion.div
-          className="glass-card p-8 md:p-10 mb-16 text-center max-w-3xl mx-auto shadow-xl border border-amber-500/20"
+          className="glass-card p-8 md:p-10 mb-12 text-center max-w-3xl mx-auto shadow-xl border border-amber-500/20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -109,6 +110,67 @@ export default function HistoryTimeline() {
             {td(temple.history.intro)}
           </p>
         </motion.div>
+
+        {/* Authentic Temple Transformation Showcase Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl mx-auto mb-16">
+          {/* Pre-Restoration Ancient Stone Shrine */}
+          <motion.div
+            className="liquid-glass overflow-hidden rounded-2xl border border-amber-500/30 text-center flex flex-col items-center justify-center"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <div className="relative h-56 w-full">
+              <Image
+                src="/images/temple-ancient.png"
+                alt="Ancient Chola Era Arasar Kovil Shrine before restoration"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+              <div className="absolute bottom-3 left-4 right-4 text-center">
+                <span className="text-xs uppercase font-extrabold tracking-wider text-amber-300 bg-black/60 px-3 py-1 rounded-full border border-amber-400/40">
+                  📜 Pre-Restoration Ancient Chola Stone Sanctum
+                </span>
+              </div>
+            </div>
+            <div className="p-4 text-center">
+              <p className="text-xs text-gray-300 text-center">
+                Historic stone architecture of Sundara Mahalakshmi & Kamala Varadaraja Temple before 2006 reconstruction.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Restored Sacred Shrines & White Vimana Towers */}
+          <motion.div
+            className="liquid-glass overflow-hidden rounded-2xl border border-amber-500/30 text-center flex flex-col items-center justify-center"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <div className="relative h-56 w-full">
+              <Image
+                src="/images/temple-renovated.png"
+                alt="Restored Arasar Kovil Shrines and White Vimana Towers"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+              <div className="absolute bottom-3 left-4 right-4 text-center">
+                <span className="text-xs uppercase font-extrabold tracking-wider text-amber-300 bg-black/60 px-3 py-1 rounded-full border border-amber-400/40">
+                  ✨ Restored Divine Shrines & Vimana Towers
+                </span>
+              </div>
+            </div>
+            <div className="p-4 text-center">
+              <p className="text-xs text-gray-300 text-center">
+                Present-day consecrated sanctum towers restored to ancient Chola glory with regular daily worship.
+              </p>
+            </div>
+          </motion.div>
+        </div>
 
         {/* Timeline Container */}
         <div className="timeline-container relative w-full max-w-4xl mx-auto">

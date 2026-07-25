@@ -83,8 +83,8 @@ export default function HeroSection() {
         style={{ scale: imageScale, y: imageY }}
       >
         <Image
-          src="/images/hero-temple.png"
-          alt="Arasar Kovil Temple emerging from golden fog"
+          src="/images/temple-renovated.png"
+          alt="Arasar Kovil Sacred Renovated Shrines and White Vimana Towers"
           fill
           priority
           className="object-cover"
