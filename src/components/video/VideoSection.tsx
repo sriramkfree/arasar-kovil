@@ -2,22 +2,23 @@
 
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/i18n/LanguageContext';
-import { Play } from 'lucide-react';
+import { Play, ExternalLink, Youtube } from 'lucide-react';
 import Image from 'next/image';
 
 export default function VideoSection() {
   const { t, td, temple } = useLanguage();
-  const hasVideo = temple.video.youtubeUrl && temple.video.youtubeUrl.length > 0;
+  const rawUrl = temple.video.youtubeUrl || 'https://youtu.be/2Tc6Y8otMJ0';
 
-  // Extract YouTube video ID
+  // Extract YouTube video ID cleanly
   const getYouTubeId = (url: string) => {
     const match = url.match(
       /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([^&?\s]+)/
     );
-    return match ? match[1] : null;
+    return match ? match[1] : '2Tc6Y8otMJ0';
   };
 
-  const videoId = hasVideo ? getYouTubeId(temple.video.youtubeUrl) : null;
+  const videoId = getYouTubeId(rawUrl);
+  const directYoutubeLink = rawUrl.startsWith('http') ? rawUrl : `https://youtu.be/${rawUrl}`;
 
   return (
     <section
@@ -27,7 +28,7 @@ export default function VideoSection() {
     >
       <div className="absolute inset-0 bg-mesh" />
 
-      <div className="relative max-w-5xl mx-auto">
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 flex flex-col items-center text-center">
         {/* Header */}
         <motion.div
           className="text-center mb-12"
@@ -36,7 +37,7 @@ export default function VideoSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="heading-display text-3xl md:text-5xl mb-4" style={{ fontFamily: 'var(--font-display)' }}>
+          <h2 className="heading-display text-3xl md:text-5xl mb-4 text-center" style={{ fontFamily: 'var(--font-display)' }}>
             <span className="heading-accent">{t('video.title')}</span>
           </h2>
           <p style={{ color: 'var(--text-secondary)' }}>{t('video.subtitle')}</p>
@@ -45,86 +46,50 @@ export default function VideoSection() {
 
         {/* Video Container */}
         <motion.div
-          className="relative rounded-2xl md:rounded-3xl overflow-hidden"
+          className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border border-amber-500/30"
           style={{
-            boxShadow: '0 0 80px rgba(212,168,71,0.08), 0 20px 60px rgba(0,0,0,0.5)',
-            border: '1px solid rgba(212,168,71,0.15)',
+            boxShadow: '0 0 80px rgba(212,168,71,0.15), 0 20px 60px rgba(0,0,0,0.8)',
           }}
           initial={{ opacity: 0, y: 30, scale: 0.97 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {/* Cinema frame glow */}
-          <div
-            className="absolute -inset-[1px] rounded-2xl md:rounded-3xl pointer-events-none"
-            style={{
-              background: 'linear-gradient(135deg, rgba(212,168,71,0.2), transparent 30%, transparent 70%, rgba(212,168,71,0.2))',
-            }}
-          />
-
-          {videoId ? (
-            <div className="relative w-full" style={{ paddingTop: '56.25%' }}>
-              <iframe
-                className="absolute inset-0 w-full h-full"
-                src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&color=white`}
-                title={td(temple.video.title)}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-              />
-            </div>
-          ) : (
-            /* Placeholder */
-            <div
-              className="relative w-full flex flex-col items-center justify-center"
-              style={{ paddingTop: '56.25%' }}
-            >
-              <div className="absolute inset-0">
-                <Image
-                  src="/images/temple-evening.png"
-                  alt="Video placeholder"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 80vw"
-                  loading="lazy"
-                />
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background: 'linear-gradient(to bottom, rgba(10,10,15,0.6), rgba(10,10,15,0.8))',
-                  }}
-                />
-              </div>
-              <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <div
-                  className="w-20 h-20 rounded-full flex items-center justify-center mb-6 animate-pulse-gold"
-                  style={{
-                    background: 'rgba(212,168,71,0.15)',
-                    border: '2px solid rgba(212,168,71,0.3)',
-                  }}
-                >
-                  <Play size={32} fill="currentColor" style={{ color: 'var(--gold-300)' }} />
-                </div>
-                <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
-                  {t('video.placeholder')}
-                </p>
-              </div>
-            </div>
-          )}
+          <div className="relative w-full" style={{ paddingTop: '56.25%' }}>
+            <iframe
+              className="absolute inset-0 w-full h-full rounded-2xl md:rounded-3xl"
+              src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=0&rel=0&modestbranding=1`}
+              title={td(temple.video.title)}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              loading="lazy"
+            />
+          </div>
         </motion.div>
 
-        {/* Description */}
-        <motion.p
-          className="text-center text-sm mt-8"
-          style={{ color: 'var(--text-muted)' }}
+        {/* Direct Watch Button & Description */}
+        <motion.div
+          className="flex flex-col items-center justify-center gap-4 mt-8 text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
         >
-          {td(temple.video.description)}
-        </motion.p>
+          <p className="text-sm text-gray-300 max-w-xl mx-auto">
+            {td(temple.video.description)}
+          </p>
+
+          <a
+            href={directYoutubeLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-amber-200 bg-amber-500/15 border border-amber-400/40 hover:bg-amber-500/30 transition-all duration-300 shadow-lg hover:scale-105"
+          >
+            <Youtube size={18} className="text-red-500" />
+            <span>Watch Directly on YouTube</span>
+            <ExternalLink size={14} className="text-amber-400" />
+          </a>
+        </motion.div>
       </div>
     </section>
   );
