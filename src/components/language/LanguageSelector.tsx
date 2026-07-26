@@ -46,19 +46,19 @@ export default function LanguageSelector() {
           </div>
 
           {/* Language buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
             <motion.button
               whileHover={{ scale: 1.05, y: -4 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => setLang('ta')}
-              className="glass-card px-10 py-6 cursor-pointer flex items-center gap-4 min-w-[220px] justify-center"
+              className="glass-card px-6 py-4 cursor-pointer flex items-center gap-3 min-w-[160px] justify-center"
             >
-              <span className="text-3xl">🇮🇳</span>
+              <span className="text-2xl">🇮🇳</span>
               <div className="text-left">
-                <div className="font-bold text-lg" style={{ color: 'var(--text-primary)', fontFamily: 'var(--font-tamil)' }}>
+                <div className="font-bold text-base" style={{ color: 'var(--text-primary)', fontFamily: 'var(--font-tamil)' }}>
                   தமிழ்
                 </div>
-                <div className="text-xs" style={{ color: 'var(--text-secondary)' }}>Tamil</div>
+                <div className="text-[10px]" style={{ color: 'var(--text-secondary)' }}>Tamil</div>
               </div>
             </motion.button>
 
@@ -66,14 +66,74 @@ export default function LanguageSelector() {
               whileHover={{ scale: 1.05, y: -4 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => setLang('en')}
-              className="glass-card px-10 py-6 cursor-pointer flex items-center gap-4 min-w-[220px] justify-center"
+              className="glass-card px-6 py-4 cursor-pointer flex items-center gap-3 min-w-[160px] justify-center"
             >
-              <span className="text-3xl">🇬🇧</span>
+              <span className="text-2xl">🇬🇧</span>
               <div className="text-left">
-                <div className="font-bold text-lg" style={{ color: 'var(--text-primary)' }}>
+                <div className="font-bold text-base" style={{ color: 'var(--text-primary)' }}>
                   English
                 </div>
-                <div className="text-xs" style={{ color: 'var(--text-secondary)' }}>ஆங்கிலம்</div>
+                <div className="text-[10px]" style={{ color: 'var(--text-secondary)' }}>English</div>
+              </div>
+            </motion.button>
+
+            <motion.button
+              whileHover={{ scale: 1.05, y: -4 }}
+              whileTap={{ scale: 0.97 }}
+              onClick={() => setLang('hi')}
+              className="glass-card px-6 py-4 cursor-pointer flex items-center gap-3 min-w-[160px] justify-center"
+            >
+              <span className="text-2xl">🇮🇳</span>
+              <div className="text-left">
+                <div className="font-bold text-base" style={{ color: 'var(--text-primary)' }}>
+                  हिंदी
+                </div>
+                <div className="text-[10px]" style={{ color: 'var(--text-secondary)' }}>Hindi</div>
+              </div>
+            </motion.button>
+
+            <motion.button
+              whileHover={{ scale: 1.05, y: -4 }}
+              whileTap={{ scale: 0.97 }}
+              onClick={() => setLang('te')}
+              className="glass-card px-6 py-4 cursor-pointer flex items-center gap-3 min-w-[160px] justify-center"
+            >
+              <span className="text-2xl">🇮🇳</span>
+              <div className="text-left">
+                <div className="font-bold text-base" style={{ color: 'var(--text-primary)' }}>
+                  తెలుగు
+                </div>
+                <div className="text-[10px]" style={{ color: 'var(--text-secondary)' }}>Telugu</div>
+              </div>
+            </motion.button>
+
+            <motion.button
+              whileHover={{ scale: 1.05, y: -4 }}
+              whileTap={{ scale: 0.97 }}
+              onClick={() => setLang('kn')}
+              className="glass-card px-6 py-4 cursor-pointer flex items-center gap-3 min-w-[160px] justify-center"
+            >
+              <span className="text-2xl">🇮🇳</span>
+              <div className="text-left">
+                <div className="font-bold text-base" style={{ color: 'var(--text-primary)' }}>
+                  ಕನ್ನಡ
+                </div>
+                <div className="text-[10px]" style={{ color: 'var(--text-secondary)' }}>Kannada</div>
+              </div>
+            </motion.button>
+
+            <motion.button
+              whileHover={{ scale: 1.05, y: -4 }}
+              whileTap={{ scale: 0.97 }}
+              onClick={() => setLang('ru')}
+              className="glass-card px-6 py-4 cursor-pointer flex items-center gap-3 min-w-[160px] justify-center"
+            >
+              <span className="text-2xl">🇷🇺</span>
+              <div className="text-left">
+                <div className="font-bold text-base" style={{ color: 'var(--text-primary)' }}>
+                  Русский
+                </div>
+                <div className="text-[10px]" style={{ color: 'var(--text-secondary)' }}>Russian</div>
               </div>
             </motion.button>
           </div>

@@ -15,7 +15,7 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-  const { t, lang, setLang } = useLanguage();
+  const { t, lang, setHasChosenLanguage } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
@@ -112,14 +112,16 @@ export default function Navbar() {
               {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
             </button>
 
-            {/* Language toggle (Tamil / English) */}
+            {/* Language toggle (Opens Selector Modal) */}
             <button
-              onClick={() => setLang(lang === 'en' ? 'ta' : 'en')}
+              onClick={() => setHasChosenLanguage(false)}
               className="btn-glass !px-3.5 !py-2.5 !text-xs sm:!text-sm font-bold flex items-center gap-2 border-amber-500/30 bg-white/5 hover:bg-amber-500/10 active:scale-95 transition-all"
               aria-label="Change Language"
             >
               <Globe size={16} className="text-amber-400" />
-              <span className="text-amber-300 font-sans">{lang === 'en' ? 'தமிழ்' : 'ENGLISH'}</span>
+              <span className="text-amber-300 font-sans uppercase">
+                {lang === 'ta' ? 'தமிழ்' : lang === 'hi' ? 'हिंदी' : lang === 'te' ? 'తెలుగు' : lang === 'kn' ? 'ಕನ್ನಡ' : lang === 'ru' ? 'Русский' : 'ENGLISH'}
+              </span>
             </button>
 
             {/* Mobile menu toggle button (Larger Touch Target) */}

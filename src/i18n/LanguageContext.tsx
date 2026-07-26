@@ -3,9 +3,13 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import en from './en.json';
 import ta from './ta.json';
+import hi from './hi.json';
+import te from './te.json';
+import kn from './kn.json';
+import ru from './ru.json';
 import templeData from '@/data/temple.json';
 
-type Language = 'en' | 'ta';
+type Language = 'en' | 'ta' | 'hi' | 'te' | 'kn' | 'ru';
 
 type NestedStrings = { [key: string]: string | NestedStrings };
 
@@ -13,13 +17,13 @@ interface LanguageContextType {
   lang: Language;
   setLang: (lang: Language) => void;
   t: (key: string) => string;
-  td: (obj: { en: string; ta: string } | string) => string;
+  td: (obj: { en: string; ta: string; hi?: string; te?: string; kn?: string; ru?: string; } | string) => string;
   hasChosenLanguage: boolean;
   setHasChosenLanguage: (v: boolean) => void;
   temple: typeof templeData;
 }
 
-const translations: Record<Language, NestedStrings> = { en, ta };
+const translations: Record<Language, NestedStrings> = { en, ta, hi, te, kn, ru };
 
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
@@ -62,10 +66,10 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     return getNestedValue(translations[lang], key);
   }, [lang]);
 
-  // Translate dynamic data objects that have { en, ta } shape
-  const td = useCallback((obj: { en: string; ta: string } | string): string => {
+  // Translate dynamic data objects that have { en, ta, ... } shape
+  const td = useCallback((obj: { en: string; ta: string; hi?: string; te?: string; kn?: string; ru?: string; } | string): string => {
     if (typeof obj === 'string') return obj;
-    return obj[lang] || obj.en;
+    return (obj as any)[lang] || obj.en;
   }, [lang]);
 
   if (!mounted) {
