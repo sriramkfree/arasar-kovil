@@ -228,7 +228,7 @@ export default function AboutSection() {
         {/* Unique Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 w-full justify-center">
           {temple.uniqueFeatures.map((feature, i) => (
-            <div key={i} className="about-card liquid-glass p-8 text-center flex flex-col items-center justify-center">
+            <div key={i} className="about-card liquid-glass p-10 text-center flex flex-col items-center justify-center">
               <div
                 className="w-16 h-16 mb-6 rounded-2xl flex items-center justify-center shadow-lg border border-amber-400/40 text-amber-300"
                 style={{
@@ -238,7 +238,7 @@ export default function AboutSection() {
                 {iconMap[feature.icon] || <Star size={28} />}
               </div>
               <h3
-                className="text-lg font-bold mb-3 text-center text-amber-200"
+                className="text-lg font-bold mb-3 text-center text-gradient-gold"
                 style={{ fontFamily: 'var(--font-display)' }}
               >
                 {td(feature.title)}
@@ -298,7 +298,7 @@ export default function AboutSection() {
                 <div className="p-6 flex flex-col items-center text-center flex-1 justify-between">
                   <div>
                     <h3
-                      className="text-xl font-bold mb-3 text-center text-amber-200"
+                      className="text-xl font-bold mb-3 text-center text-gradient-gold"
                       style={{ fontFamily: 'var(--font-display)' }}
                     >
                       {td(deity.name)}
@@ -322,7 +322,7 @@ export default function AboutSection() {
         <div className="flex justify-center w-full max-w-md mx-auto">
 
           {/* Visitor Guide */}
-          <div className="about-card liquid-glass p-8 flex flex-col items-center text-center">
+          <div className="about-card liquid-glass p-10 flex flex-col items-center text-center">
             <div
               className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 border border-amber-400/30 text-amber-300"
               style={{ background: 'rgba(229,184,58,0.15)' }}
@@ -330,7 +330,7 @@ export default function AboutSection() {
               <Shirt size={24} />
             </div>
             <h3
-              className="text-xl font-bold mb-4 text-center text-amber-200"
+              className="text-xl font-bold mb-4 text-center text-gradient-gold"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               {t('about.visitorsTitle')}
