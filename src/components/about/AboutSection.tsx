@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { gsap } from '@/lib/gsapConfig';
-import { Sparkles, Music, Star, Clock, Info, Shirt, X, BookOpen, ChevronRight, Crown, Sun, ShieldCheck } from 'lucide-react';
+import { Sparkles, Music, Star, Clock, Info, Shirt, X, BookOpen, ChevronRight, Crown, Sun, ShieldCheck, Volume2, Square } from 'lucide-react';
 
 const iconMap: Record<string, React.ReactNode> = {
   sparkles: <Sparkles size={28} />,
@@ -112,6 +112,8 @@ export default function AboutSection() {
   const { t, td, temple, lang } = useLanguage();
   const sectionRef = useRef<HTMLDivElement>(null);
   const [selectedDeity, setSelectedDeity] = useState<DetailedDeityInfo | null>(null);
+  const [isPlayingTTS, setIsPlayingTTS] = useState(false);
+  const [showVenusAnimation, setShowVenusAnimation] = useState(false);
 
   useEffect(() => {
     if (!sectionRef.current) return;
@@ -136,8 +138,48 @@ export default function AboutSection() {
         );
       });
     }, sectionRef);
-    return () => ctx.revert();
+    return () => {
+      ctx.revert();
+      if (typeof window !== 'undefined' && window.speechSynthesis) {
+        window.speechSynthesis.cancel();
+      }
+    };
   }, []);
+
+  const toggleTTS = () => {
+    if (!window.speechSynthesis) return;
+    
+    if (isPlayingTTS) {
+      window.speechSynthesis.cancel();
+      setIsPlayingTTS(false);
+      return;
+    }
+    
+    if (!selectedDeity) return;
+
+    // Build history text
+    const paragraphs = lang === 'ta' ? selectedDeity.history.ta : selectedDeity.history.en;
+    const historyText = paragraphs.join('. ');
+    
+    const utterance = new SpeechSynthesisUtterance(historyText);
+    utterance.lang = lang === 'ta' ? 'ta-IN' : lang === 'hi' ? 'hi-IN' : lang === 'te' ? 'te-IN' : lang === 'kn' ? 'kn-IN' : lang === 'ru' ? 'ru-RU' : 'en-US';
+    utterance.rate = 0.9; // Slightly slower for better comprehension
+    
+    utterance.onend = () => setIsPlayingTTS(false);
+    utterance.onerror = () => setIsPlayingTTS(false);
+    
+    window.speechSynthesis.speak(utterance);
+    setIsPlayingTTS(true);
+  };
+
+  const closeModal = () => {
+    if (typeof window !== 'undefined' && window.speechSynthesis) {
+      window.speechSynthesis.cancel();
+    }
+    setIsPlayingTTS(false);
+    setShowVenusAnimation(false);
+    setSelectedDeity(null);
+  };
 
   return (
     <section
@@ -221,8 +263,9 @@ export default function AboutSection() {
             return (
               <motion.div
                 key={i}
-                className="about-card liquid-glass overflow-hidden group flex flex-col text-center cursor-pointer border border-amber-500/30 shadow-2xl"
+                className="about-card liquid-glass overflow-hidden group flex flex-col text-center cursor-pointer border border-amber-500/30 shadow-2xl relative z-10"
                 whileHover={{ y: -8, scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 onClick={() => setSelectedDeity(deityHistories[deityKey])}
               >
                 <div className="relative h-72 w-full overflow-hidden">
@@ -240,7 +283,6 @@ export default function AboutSection() {
                       background: 'linear-gradient(to top, rgba(8,8,12,0.95) 0%, rgba(8,8,12,0.3) 50%, transparent 100%)',
                     }}
                   />
-
                   <div className="absolute top-4 right-4 bg-amber-500/30 backdrop-blur-xl border border-amber-400/50 rounded-full px-3 py-1 text-[11px] font-bold text-amber-200 flex items-center gap-1.5 shadow-lg">
                     <BookOpen size={13} />
                     <span>View Lore</span>
@@ -358,7 +400,7 @@ export default function AboutSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setSelectedDeity(null)}
+            onClick={closeModal}
           >
             {/* Ambient Backdrop Blur */}
             <div className="fixed inset-0 bg-black/85 backdrop-blur-3xl" />
@@ -374,14 +416,21 @@ export default function AboutSection() {
               {/* Close Button */}
               <button
                 className="absolute top-5 right-5 p-3 rounded-full text-white bg-white/10 hover:bg-amber-500/20 border border-white/20 hover:border-amber-400 transition-all cursor-pointer shadow-lg"
-                onClick={() => setSelectedDeity(null)}
+                onClick={closeModal}
                 aria-label="Close"
               >
                 <X size={20} />
               </button>
 
-              {/* Full Deity Portrait Showcase */}
-              <div className="relative w-full h-80 rounded-2xl overflow-hidden mb-6 border-2 border-amber-400/40 shadow-2xl">
+              {/* Full Deity Portrait Showcase & Interactive Venus Animation */}
+              <div 
+                className={`relative w-full h-80 rounded-2xl overflow-hidden mb-6 border-2 border-amber-400/40 shadow-2xl ${selectedDeity.title.en.includes('Mahalakshmi') ? 'cursor-pointer' : ''}`}
+                onClick={() => {
+                  if (selectedDeity.title.en.includes('Mahalakshmi')) {
+                    setShowVenusAnimation(true);
+                  }
+                }}
+              >
                 <Image
                   src={selectedDeity.image}
                   alt={selectedDeity.title.en}
@@ -389,7 +438,50 @@ export default function AboutSection() {
                   className="object-cover object-top"
                   quality={95}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent pointer-events-none" />
+
+                {/* Venus Interactive Overlay */}
+                <AnimatePresence>
+                  {showVenusAnimation && selectedDeity.title.en.includes('Mahalakshmi') && (
+                    <motion.div
+                      className="absolute inset-0 bg-black/80 flex flex-col items-center justify-center p-4 text-center z-20"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setShowVenusAnimation(false);
+                      }}
+                    >
+                      <motion.div
+                        className="w-16 h-16 rounded-full bg-amber-500/20 border-2 border-amber-400 flex items-center justify-center mb-4 shadow-[0_0_40px_rgba(245,158,11,0.6)]"
+                        initial={{ scale: 0.5, rotate: 180 }}
+                        animate={{ scale: 1, rotate: 0 }}
+                        transition={{ type: 'spring', stiffness: 200, damping: 15 }}
+                      >
+                        <Sparkles className="text-amber-300" size={32} />
+                      </motion.div>
+                      <h4 className="text-xl font-extrabold text-amber-300 mb-2 font-display">Six Sacred Toes</h4>
+                      <p className="text-xs sm:text-sm text-gray-200">
+                        The ultimate symbol of Goddess Mahalakshmi's cosmic sovereignty over Shukra (Venus). Touching her sacred feet brings profound wealth, beauty, and cosmic alignment.
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+                {/* Venus Hint Badge (Only for Lakshmi if animation not shown) */}
+                {!showVenusAnimation && selectedDeity.title.en.includes('Mahalakshmi') && (
+                  <motion.div
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-amber-500/50 pointer-events-none shadow-2xl"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5, repeat: Infinity, repeatType: 'reverse', duration: 2 }}
+                  >
+                    <span className="text-[10px] uppercase font-bold text-amber-300 flex items-center gap-2">
+                      Tap Image to Reveal Six-Toes Cosmic Truth <Sparkles size={12} />
+                    </span>
+                  </motion.div>
+                )}
 
                 {/* Badge Overlay */}
                 <div className="absolute top-4 left-4 bg-amber-500/80 backdrop-blur-md border border-amber-300/60 rounded-full px-3.5 py-1 text-xs font-extrabold text-black shadow-lg flex items-center gap-1.5">
@@ -423,12 +515,29 @@ export default function AboutSection() {
                   </div>
                 </div>
 
-                {/* Detailed Sacred Lore */}
                 <div className="p-5 rounded-2xl bg-white/5 border border-white/10">
-                  <h4 className="text-xs uppercase tracking-wider font-extrabold text-amber-400 mb-3 flex items-center gap-2">
-                    <BookOpen size={16} />
-                    <span>📜 Sacred Puranic History & 6-Toed Lore</span>
-                  </h4>
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+                    <h4 className="text-xs uppercase tracking-wider font-extrabold text-amber-400 flex items-center gap-2">
+                      <BookOpen size={16} />
+                      <span>📜 Sacred Puranic History & 6-Toed Lore</span>
+                    </h4>
+                    <button
+                      onClick={toggleTTS}
+                      className={`flex items-center justify-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold transition-all border ${isPlayingTTS ? 'bg-amber-500 text-black border-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.5)]' : 'bg-black/50 text-amber-400 border-amber-500/50 hover:bg-amber-500/20'}`}
+                    >
+                      {isPlayingTTS ? (
+                        <>
+                          <Square size={14} fill="currentColor" />
+                          <span>Stop Audio</span>
+                        </>
+                      ) : (
+                        <>
+                          <Volume2 size={14} />
+                          <span>Play Audio History</span>
+                        </>
+                      )}
+                    </button>
+                  </div>
                   <ul className="space-y-3">
                     {(lang === 'ta' ? selectedDeity.history.ta : selectedDeity.history.en).map((paragraph, idx) => (
                       <li key={idx} className="text-xs sm:text-sm text-gray-200 leading-relaxed flex items-start gap-2.5">
