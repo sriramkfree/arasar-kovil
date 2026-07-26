@@ -95,13 +95,13 @@ export default function FestivalsAndFAQ() {
                 transition={{ delay: i * 0.1, duration: 0.5 }}
               >
                 <button
-                  className="w-full px-6 py-6 sm:px-8 sm:py-7 flex items-center justify-between text-center cursor-pointer gap-4"
+                  className="w-full px-5 py-6 sm:px-8 sm:py-7 flex items-center justify-between text-left cursor-pointer gap-4"
                   onClick={() => setOpenFaq(isOpen ? null : i)}
                 >
-                  <div className="flex items-center justify-center gap-3 text-center w-full">
-                    <span className="text-amber-400 font-extrabold text-lg shrink-0">❖</span>
+                  <div className="flex items-start justify-start gap-3 text-left w-full">
+                    <span className="text-amber-400 font-extrabold text-xl mt-0.5 shrink-0">❖</span>
                     <span
-                      className="text-base sm:text-lg md:text-xl font-extrabold leading-snug text-center text-amber-100 w-full"
+                      className="text-xl sm:text-2xl md:text-2xl font-extrabold leading-tight text-left text-amber-100 w-full"
                       style={{ fontFamily: 'var(--font-display)' }}
                     >
                       {td(item.q)}
@@ -125,8 +125,8 @@ export default function FestivalsAndFAQ() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden w-full"
                     >
-                      <div className="px-6 pb-7 sm:px-8 sm:pb-8 pt-2 text-center border-t border-amber-500/20 w-full">
-                        <p className="text-sm sm:text-base leading-relaxed text-center text-gray-200 font-normal max-w-2xl mx-auto">
+                      <div className="px-5 pb-7 sm:px-14 sm:pb-8 pt-2 text-left border-t border-amber-500/20 w-full">
+                        <p className="text-base sm:text-lg leading-relaxed text-left text-gray-200 font-normal max-w-3xl">
                           {td(item.a)}
                         </p>
                       </div>

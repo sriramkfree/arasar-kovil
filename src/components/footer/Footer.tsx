@@ -111,28 +111,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Visiting Hours */}
+          {/* Contact */}
           <div>
-            <h3
-              className="text-sm font-semibold uppercase tracking-wider mb-4"
-              style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-display)' }}
-            >
-              {t('footer.visitingHours')}
-            </h3>
-            <div className="space-y-2.5">
-              <div className="flex flex-col text-xs space-y-0.5">
-                <span className="font-bold text-amber-300">Friday Special (Sukra Hora):</span>
-                <span style={{ color: 'var(--text-secondary)' }}>
-                  Morning: {temple.timings.friday.morning} | Evening: {temple.timings.friday.evening}
-                </span>
-              </div>
-              <div className="flex flex-col text-xs space-y-0.5 pt-1">
-                <span className="font-bold text-gray-300">Normal Days (Mon-Thu, Sat, Sun):</span>
-                <span style={{ color: 'var(--text-secondary)' }}>
-                  Morning: {temple.timings.normalDays.morning} | Evening: {temple.timings.normalDays.evening}
-                </span>
-              </div>
-            </div>
             <div className="mt-4">
               <h4
                 className="text-sm font-semibold uppercase tracking-wider mb-2"

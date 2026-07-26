@@ -318,56 +318,8 @@ export default function AboutSection() {
           })}
         </div>
 
-        {/* Timings & Visitor Guide Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full justify-center">
-          {/* Temple Timings */}
-          <div className="about-card liquid-glass p-8 flex flex-col items-center text-center">
-            <div
-              className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 border border-amber-400/30 text-amber-300"
-              style={{ background: 'rgba(229,184,58,0.15)' }}
-            >
-              <Clock size={24} />
-            </div>
-            <h3
-              className="text-xl font-bold mb-6 text-center text-amber-200"
-              style={{ fontFamily: 'var(--font-display)' }}
-            >
-              {t('about.timingsTitle')}
-            </h3>
-            <div className="w-full space-y-4 max-w-md">
-              {/* Friday Special Timings */}
-              <div className="p-4 rounded-xl bg-amber-500/15 border border-amber-400/40 text-center flex flex-col items-center justify-center">
-                <div className="flex items-center justify-center mb-1.5 w-full text-center">
-                  <span className="text-xs uppercase font-extrabold tracking-wider text-amber-300 text-center block w-full">
-                    🌟 Friday Special Darshan (Sukra Hora)
-                  </span>
-                </div>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-xs sm:text-sm font-semibold text-gray-200 text-center w-full">
-                  <span>Morning: <strong className="text-amber-300">{temple.timings.friday.morning}</strong></span>
-                  <span className="hidden sm:inline text-amber-400">•</span>
-                  <span>Evening: <strong className="text-amber-300">{temple.timings.friday.evening}</strong></span>
-                </div>
-              </div>
-
-              {/* Normal Days Timings */}
-              <div className="p-4 rounded-xl bg-white/5 border border-white/10 text-center flex flex-col items-center justify-center">
-                <div className="flex items-center justify-center mb-1.5 w-full text-center">
-                  <span className="text-xs uppercase font-extrabold tracking-wider text-gray-300 text-center block w-full">
-                    📅 Normal Days (Mon — Thu, Sat, Sun)
-                  </span>
-                </div>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-xs sm:text-sm font-semibold text-gray-200 text-center w-full">
-                  <span>Morning: <strong className="text-amber-300">{temple.timings.normalDays.morning}</strong></span>
-                  <span className="hidden sm:inline text-amber-400">•</span>
-                  <span>Evening: <strong className="text-amber-300">{temple.timings.normalDays.evening}</strong></span>
-                </div>
-              </div>
-            </div>
-            <p className="mt-6 text-xs flex items-center justify-center gap-2 text-center text-gray-400">
-              <Info size={14} className="shrink-0 text-amber-400" />
-              {td(temple.timings.note)}
-            </p>
-          </div>
+        {/* Visitor Guide Grid */}
+        <div className="flex justify-center w-full max-w-md mx-auto">
 
           {/* Visitor Guide */}
           <div className="about-card liquid-glass p-8 flex flex-col items-center text-center">
@@ -434,6 +386,7 @@ export default function AboutSection() {
                 onClick={() => {
                   if (selectedDeity.title.en.includes('Mahalakshmi')) {
                     setShowVenusAnimation(true);
+                    if (!isPlayingTTS) toggleTTS();
                   }
                 }}
               >

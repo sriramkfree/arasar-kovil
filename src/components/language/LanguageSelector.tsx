@@ -103,7 +103,7 @@ export default function LanguageSelector() {
                 <div className="font-bold text-base" style={{ color: 'var(--text-primary)' }}>
                   తెలుగు
                 </div>
-                <div className="text-[10px]" style={{ color: 'var(--text-secondary)' }}>Telugu</div>
+                <div className="text-[10px]" style={{ color: 'var(--text-secondary)' }}>Telugu (Andhra)</div>
               </div>
             </motion.button>
 
@@ -118,7 +118,7 @@ export default function LanguageSelector() {
                 <div className="font-bold text-base" style={{ color: 'var(--text-primary)' }}>
                   ಕನ್ನಡ
                 </div>
-                <div className="text-[10px]" style={{ color: 'var(--text-secondary)' }}>Kannada</div>
+                <div className="text-[10px]" style={{ color: 'var(--text-secondary)' }}>Kannada (Karnataka)</div>
               </div>
             </motion.button>
 

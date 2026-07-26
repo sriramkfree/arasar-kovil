@@ -28,7 +28,7 @@ export default function VideoSection() {
     >
       <div className="absolute inset-0 bg-mesh" />
 
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 flex flex-col items-center text-center w-full">
+      <div className="relative max-w-[95vw] lg:max-w-7xl mx-auto px-2 sm:px-6 flex flex-col items-center text-center w-full">
         {/* Header */}
         <motion.div
           className="text-center mb-12"
