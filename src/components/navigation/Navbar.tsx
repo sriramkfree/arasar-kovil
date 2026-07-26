@@ -44,15 +44,18 @@ export default function Navbar() {
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className="fixed top-0 left-0 right-0 z-50 px-3 sm:px-6 py-3 sm:py-4 flex justify-center items-center w-full"
+        className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl rounded-full flex items-center justify-between px-6 py-3.5 transition-all duration-300"
+        style={{
+          background: scrolled 
+            ? 'linear-gradient(135deg, rgba(18, 18, 26, 0.8) 0%, rgba(10, 10, 15, 0.9) 100%)'
+            : 'rgba(10, 10, 15, 0.6)',
+          backdropFilter: 'blur(32px) saturate(200%)',
+          WebkitBackdropFilter: 'blur(32px) saturate(200%)',
+          border: '1px solid rgba(229, 184, 58, 0.25)',
+          boxShadow: scrolled ? '0 20px 40px rgba(0,0,0,0.5), 0 0 20px rgba(229, 184, 58, 0.1)' : 'none'
+        }}
       >
-        <div
-          className={`w-full max-w-6xl mx-auto rounded-2xl px-4 sm:px-6 py-3 sm:py-3.5 flex items-center justify-between transition-all duration-300 ${
-            scrolled
-              ? 'glass shadow-2xl border-amber-500/30 backdrop-blur-2xl bg-black/80'
-              : 'glass-subtle bg-black/60 border-white/10'
-          }`}
-        >
+        <div className="w-full flex items-center justify-between relative">
           {/* Logo */}
           <a
             href="#"
@@ -60,7 +63,7 @@ export default function Navbar() {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="flex items-center gap-2.5 group cursor-pointer"
+            className="flex items-center gap-2.5 group cursor-pointer relative z-10"
           >
             <div className="w-9 h-9 rounded-xl flex items-center justify-center bg-amber-500/10 border border-amber-500/30 text-amber-400 group-hover:scale-105 transition-transform">
               <span className="text-xl glow-text">ॐ</span>
@@ -78,8 +81,8 @@ export default function Navbar() {
             </div>
           </a>
 
-          {/* Desktop Links */}
-          <div className="hidden lg:flex items-center gap-7">
+          {/* Desktop Links - Absolutely Centered */}
+          <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-8 z-0">
             {navLinks.map((link) => (
               <a
                 key={link.key}
@@ -97,7 +100,7 @@ export default function Navbar() {
           </div>
 
           {/* Right controls */}
-          <div className="flex items-center gap-2.5 sm:gap-3.5">
+          <div className="flex items-center gap-2.5 sm:gap-3.5 relative z-10">
             {/* Theme Toggle (Light / Dark mode) */}
             <button
               onClick={() => {
