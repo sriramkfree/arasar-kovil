@@ -83,17 +83,17 @@ export default function ContactSection() {
                 {card.icon}
               </div>
               <h3
-                className="text-sm font-semibold mb-1"
+                className="text-lg font-bold mb-1"
                 style={{ color: 'var(--text-primary)', fontFamily: 'var(--font-display)' }}
               >
                 {card.title}
               </h3>
               {card.subtitle && (
-                <p className="text-xs mb-1" style={{ color: 'var(--text-muted)' }}>
+                <p className="text-sm mb-1" style={{ color: 'var(--text-muted)' }}>
                   {card.subtitle}
                 </p>
               )}
-              <p className="text-xs" style={{ color: 'var(--text-secondary)' }}>
+              <p className="text-base font-semibold" style={{ color: 'var(--text-secondary)' }}>
                 {card.value}
               </p>
             </motion.a>
@@ -104,42 +104,42 @@ export default function ContactSection() {
         <div className="grid lg:grid-cols-2 gap-6">
           {/* Address Card */}
           <motion.div
-            className="glass-card p-8"
+            className="glass-card p-8 flex flex-col items-center text-center justify-center"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex items-center gap-3 mb-6">
-              <MapPin size={20} style={{ color: 'var(--gold-300)' }} />
+            <div className="flex flex-col items-center gap-3 mb-6">
+              <MapPin size={24} style={{ color: 'var(--gold-300)' }} />
               <h3
-                className="text-lg font-semibold"
+                className="text-xl font-bold"
                 style={{ color: 'var(--text-primary)', fontFamily: 'var(--font-display)' }}
               >
                 {t('contact.address')}
               </h3>
             </div>
-            <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--text-secondary)' }}>
+            <p className="text-base leading-relaxed mb-6" style={{ color: 'var(--text-secondary)' }}>
               {td(temple.contact.address)}
             </p>
 
             <div className="mb-6">
-              <p className="text-xs uppercase tracking-wider mb-2" style={{ color: 'var(--text-muted)' }}>
+              <p className="text-sm font-bold uppercase tracking-wider mb-2" style={{ color: 'var(--text-muted)' }}>
                 {t('contact.distanceTitle')}
               </p>
-              <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
+              <p className="text-base" style={{ color: 'var(--text-secondary)' }}>
                 {td(temple.location.distance)}
               </p>
             </div>
 
-            <div className="mb-6">
-              <p className="text-xs uppercase tracking-wider mb-2" style={{ color: 'var(--text-muted)' }}>
+            <div className="mb-8">
+              <p className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: 'var(--text-muted)' }}>
                 {t('contact.nearbyTitle')}
               </p>
-              <ul className="space-y-1">
+              <ul className="space-y-2 flex flex-col items-center">
                 {temple.location.nearbyAttractions.map((place, i) => (
-                  <li key={i} className="text-sm flex items-center gap-2" style={{ color: 'var(--text-secondary)' }}>
-                    <Map size={12} style={{ color: 'var(--gold-300)' }} />
+                  <li key={i} className="text-base flex items-center justify-center gap-2" style={{ color: 'var(--text-secondary)' }}>
+                    <Map size={14} style={{ color: 'var(--gold-300)' }} />
                     {td(place)}
                   </li>
                 ))}

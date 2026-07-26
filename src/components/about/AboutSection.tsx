@@ -403,22 +403,22 @@ export default function AboutSection() {
                 <AnimatePresence>
                   {showVenusAnimation && selectedDeity.title.en.includes('Mahalakshmi') && (
                     <motion.div
-                      className="absolute inset-0 bg-black/80 flex flex-col items-center justify-center p-4 text-center z-20"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
+                      className="absolute bottom-0 left-0 right-0 bg-black/80 backdrop-blur-md flex flex-col items-center justify-center p-4 text-center z-20 border-t border-amber-400/30"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 20 }}
                       onClick={(e) => {
                         e.stopPropagation();
                         setShowVenusAnimation(false);
                       }}
                     >
                       <motion.div
-                        className="w-16 h-16 rounded-full bg-amber-500/20 border-2 border-amber-400 flex items-center justify-center mb-4 shadow-[0_0_40px_rgba(245,158,11,0.6)]"
+                        className="w-10 h-10 rounded-full bg-amber-500/20 border-2 border-amber-400 flex items-center justify-center mb-2 shadow-[0_0_40px_rgba(245,158,11,0.6)]"
                         initial={{ scale: 0.5, rotate: 180 }}
                         animate={{ scale: 1, rotate: 0 }}
                         transition={{ type: 'spring', stiffness: 200, damping: 15 }}
                       >
-                        <Sparkles className="text-amber-300" size={32} />
+                        <Sparkles className="text-amber-300" size={20} />
                       </motion.div>
                       <h4 className="text-xl font-extrabold text-amber-300 mb-2 font-display">Six Sacred Toes</h4>
                       <p className="text-xs sm:text-sm text-gray-200">

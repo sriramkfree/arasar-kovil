@@ -124,7 +124,18 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="antialiased">
+      <body className="antialiased relative min-h-screen">
+        {/* Parallax Background */}
+        <div 
+          className="fixed inset-0 -z-30 opacity-15"
+          style={{
+            backgroundImage: "url('/images/hero-temple.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundAttachment: 'fixed'
+          }}
+        />
+        
         <div className="ambient-orb ambient-orb-1" />
         <div className="ambient-orb ambient-orb-2" />
         {children}
