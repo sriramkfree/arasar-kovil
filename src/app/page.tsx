@@ -11,6 +11,7 @@ const Navbar = dynamic(() => import('@/components/navigation/Navbar'), { ssr: fa
 const HeroSection = dynamic(() => import('@/components/hero/HeroSection'), { ssr: false });
 const AboutSection = dynamic(() => import('@/components/about/AboutSection'), { ssr: false });
 const HistoryTimeline = dynamic(() => import('@/components/history/HistoryTimeline'), { ssr: false });
+const Gallery3D = dynamic(() => import('@/components/gallery/Gallery3D'), { ssr: false });
 const GallerySection = dynamic(() => import('@/components/gallery/GallerySection'), { ssr: false });
 const VideoSection = dynamic(() => import('@/components/video/VideoSection'), { ssr: false });
 const FestivalsAndFAQ = dynamic(() => import('@/components/festivals/FestivalsAndFAQ'), { ssr: false });
@@ -75,6 +76,7 @@ function TempleWebsite() {
           <HeroSection />
           <AboutSection />
           <HistoryTimeline />
+          <Gallery3D />
           <GallerySection />
           <VideoSection />
           <FestivalsAndFAQ />

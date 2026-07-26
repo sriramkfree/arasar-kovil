@@ -180,13 +180,7 @@
       { "en": "Vedanthangal Bird Sanctuary", "ta": "வேடந்தாங்கல் பறவைகள் சரணாலயம்" }
     ]
   },
-  "donation": {
-    "title": { "en": "Temple Donation", "ta": "கோவில் நன்கொடை" },
-    "description": { "en": "Your generous contribution helps maintain the temple, conduct daily poojas, and celebrate festivals. Every offering is a blessing.", "ta": "உங்கள் தாராள பங்களிப்பு கோவிலை பராமரிக்கவும், தினசரி பூஜைகளை நடத்தவும், திருவிழாக்களை கொண்டாடவும் உதவுகிறது. ஒவ்வொரு காணிக்கையும் ஒரு ஆசீர்வாதம்." },
-    "upiId": "sriram28@fam",
-    "qrCodeImage": "/images/qr-placeholder.png",
-    "thankYou": { "en": "May the Goddess bless you abundantly 🙏", "ta": "தேவி உங்களை மிகுதியாக ஆசீர்வதிக்கட்டும் 🙏" }
-  },
+
   "video": {
     "youtubeUrl": "https://youtu.be/2Tc6Y8otMJ0?si=8IzvHaIz0tfExKHT",
     "title": { "en": "Experience Arasar Kovil", "ta": "அரசர் கோவிலை அனுபவியுங்கள்" },

@@ -5,7 +5,6 @@
     "history": "History",
     "gallery": "Gallery",
     "video": "Video",
-    "donate": "Donate",
     "contact": "Contact",
     "reviews": "Reviews"
   },
@@ -45,27 +44,6 @@
     "title": "History & Divine Glory of the Temple",
     "subtitle": "Watch the sacred history and divine architecture unfold",
     "placeholder": "Video coming soon — Check back for an immersive experience"
-  },
-  "donation": {
-    "title": "Contribute to the Temple",
-    "subtitle": "Your offering sustains centuries of tradition",
-    "selectPurpose": "Select Donation Purpose",
-    "selectAmount": "Select or Enter Amount",
-    "customAmount": "Custom Amount (₹)",
-    "scanQR": "Scan QR Code",
-    "upiId": "UPI ID",
-    "copy": "Copy UPI ID",
-    "copied": "Copied!",
-    "payViaApp": "Pay via UPI App",
-    "thankYou": "May Goddess Sundara Mahalakshmi bless your generous offering 🙏",
-    "purposes": {
-      "annadhanam": "Annadhanam (Free Meals)",
-      "pooja": "Special Pooja & Abhishekam",
-      "renovation": "Temple Maintenance & Renovation",
-      "flowers": "Flower Alankaram",
-      "deepam": "Lamp Oil (Deepam Sevai)",
-      "general": "General Temple Trust Fund"
-    }
   },
   "contact": {
     "title": "Visit Us",

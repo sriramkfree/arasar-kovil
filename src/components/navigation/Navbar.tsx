@@ -177,16 +177,6 @@ export default function Navbar() {
                 ))}
               </div>
 
-              <div className="mt-4 pt-4 border-t border-amber-500/20 flex flex-col gap-3">
-                <a
-                  href="#donation"
-                  onClick={(e) => handleClick(e, '#donation')}
-                  className="btn-gold w-full py-3 text-center justify-center font-bold text-sm"
-                >
-                  <Sparkles size={16} />
-                  <span>{t('nav.donate')}</span>
-                </a>
-              </div>
             </motion.div>
           </motion.div>
         )}
