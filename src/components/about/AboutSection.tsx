@@ -111,6 +111,7 @@ const deityHistories: Record<string, DetailedDeityInfo> = {
 export default function AboutSection() {
   const { t, td, temple, lang } = useLanguage();
   const sectionRef = useRef<HTMLDivElement>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   const [selectedDeity, setSelectedDeity] = useState<DetailedDeityInfo | null>(null);
   const [isPlayingTTS, setIsPlayingTTS] = useState(false);
   const [showVenusAnimation, setShowVenusAnimation] = useState(false);
@@ -140,17 +141,18 @@ export default function AboutSection() {
     }, sectionRef);
     return () => {
       ctx.revert();
-      if (typeof window !== 'undefined' && window.speechSynthesis) {
-        window.speechSynthesis.cancel();
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.src = '';
       }
     };
   }, []);
 
   const toggleTTS = () => {
-    if (!window.speechSynthesis) return;
-    
     if (isPlayingTTS) {
-      window.speechSynthesis.cancel();
+      if (audioRef.current) {
+        audioRef.current.pause();
+      }
       setIsPlayingTTS(false);
       return;
     }
@@ -161,20 +163,24 @@ export default function AboutSection() {
     const paragraphs = lang === 'ta' ? selectedDeity.history.ta : selectedDeity.history.en;
     const historyText = paragraphs.join('. ');
     
-    const utterance = new SpeechSynthesisUtterance(historyText);
-    utterance.lang = lang === 'ta' ? 'ta-IN' : lang === 'hi' ? 'hi-IN' : lang === 'te' ? 'te-IN' : lang === 'kn' ? 'kn-IN' : lang === 'ru' ? 'ru-RU' : 'en-US';
-    utterance.rate = 0.9; // Slightly slower for better comprehension
+    // Play using our new Edge TTS API
+    const url = `/api/tts?lang=${lang}&text=${encodeURIComponent(historyText)}`;
     
-    utterance.onend = () => setIsPlayingTTS(false);
-    utterance.onerror = () => setIsPlayingTTS(false);
+    if (!audioRef.current) {
+      audioRef.current = new Audio(url);
+      audioRef.current.onended = () => setIsPlayingTTS(false);
+      audioRef.current.onerror = () => setIsPlayingTTS(false);
+    } else {
+      audioRef.current.src = url;
+    }
     
-    window.speechSynthesis.speak(utterance);
+    audioRef.current.play().catch(console.error);
     setIsPlayingTTS(true);
   };
 
   const closeModal = () => {
-    if (typeof window !== 'undefined' && window.speechSynthesis) {
-      window.speechSynthesis.cancel();
+    if (audioRef.current) {
+      audioRef.current.pause();
     }
     setIsPlayingTTS(false);
     setShowVenusAnimation(false);
