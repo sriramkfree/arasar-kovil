@@ -70,7 +70,13 @@ export default function Footer() {
       >
         <div className="max-w-6xl mx-auto flex flex-col items-center text-center gap-10">
           {/* Temple Info */}
-          <div className="flex flex-col items-center">
+          <motion.div
+            className="flex flex-col items-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
             <div className="flex items-center justify-center gap-2 mb-4">
               <span className="text-3xl" style={{ color: 'var(--gold-300)' }}>ॐ</span>
               <h3
@@ -83,10 +89,16 @@ export default function Footer() {
             <p className="text-base leading-relaxed max-w-sm" style={{ color: 'var(--text-muted)' }}>
               {td(temple.temple.subtitle)}
             </p>
-          </div>
+          </motion.div>
 
           {/* Quick Links */}
-          <div className="flex flex-col items-center">
+          <motion.div
+            className="flex flex-col items-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.15 }}
+          >
             <h3
               className="text-base font-bold uppercase tracking-wider mb-5 text-gradient-gold"
               style={{ fontFamily: 'var(--font-display)' }}
@@ -109,10 +121,16 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Contact */}
-          <div className="flex flex-col items-center text-center">
+          <motion.div
+            className="flex flex-col items-center text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+          >
             <h4
               className="text-base font-bold uppercase tracking-wider mb-2 text-gradient-gold"
               style={{ fontFamily: 'var(--font-display)' }}
@@ -122,17 +140,23 @@ export default function Footer() {
             <p className="text-base font-semibold" style={{ color: 'var(--text-muted)' }}>
               {temple.contact.priests[0]?.phone}
             </p>
-          </div>
+          </motion.div>
 
           {/* Legal / Bottom */}
-          <div className="flex flex-col items-center mt-6 pt-6 border-t border-white/10 w-full max-w-lg mx-auto text-center">
+          <motion.div
+            className="flex flex-col items-center mt-6 pt-6 border-t border-white/10 w-full max-w-lg mx-auto text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+          >
             <p className="text-sm" style={{ color: 'var(--text-muted)' }}>
               © {year} Arasar Kovil. {t('footer.allRightsReserved')}
             </p>
             <p className="text-xs mt-2 flex items-center justify-center gap-1" style={{ color: 'var(--text-muted)' }}>
               Made with <Heart size={12} className="text-red-500 animate-pulse" /> for Goddess Mahalakshmi
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </footer>

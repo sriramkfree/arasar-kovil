@@ -42,7 +42,7 @@ export default function ContactSection() {
     >
       <div className="absolute inset-0 bg-mesh" />
 
-      <div className="relative max-w-6xl mx-auto">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 w-full">
         {/* Header */}
         <motion.div
           className="text-center mb-16"
@@ -51,30 +51,30 @@ export default function ContactSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="heading-display text-3xl md:text-5xl mb-4" style={{ fontFamily: 'var(--font-display)' }}>
+          <h2 className="heading-display text-4xl sm:text-5xl md:text-6xl mb-4" style={{ fontFamily: 'var(--font-display)' }}>
             <span className="heading-accent">{t('contact.title')}</span>
           </h2>
-          <p style={{ color: 'var(--text-secondary)' }}>{t('contact.subtitle')}</p>
+          <p className="text-base sm:text-lg" style={{ color: 'var(--text-secondary)' }}>{t('contact.subtitle')}</p>
           <div className="section-divider mt-6 mx-auto" />
         </motion.div>
 
-        {/* Contact Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 max-w-4xl mx-auto gap-6 mb-12 justify-center w-full">
+        {/* Contact Grid — 3 equal cards, perfectly centered */}
+        <div className="flex flex-col sm:flex-row items-stretch justify-center gap-6 mb-16 w-full max-w-4xl mx-auto">
           {contactCards.map((card, i) => (
             <motion.a
               key={i}
               href={card.href}
               target={card.href.startsWith('http') ? '_blank' : undefined}
               rel={card.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className="glass-card p-6 block text-center flex flex-col items-center justify-center"
+              className="glass-card p-6 flex-1 flex flex-col items-center justify-center text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.6 }}
-              whileHover={{ y: -4 }}
+              transition={{ delay: i * 0.15, duration: 0.6 }}
+              whileHover={{ y: -6, scale: 1.02 }}
             >
               <div
-                className="w-10 h-10 rounded-xl flex items-center justify-center mb-4"
+                className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
                 style={{
                   background: `${card.color}15`,
                   color: card.color,
@@ -100,13 +100,13 @@ export default function ContactSection() {
           ))}
         </div>
 
-        {/* Address + Map */}
-        <div className="grid lg:grid-cols-2 gap-6">
+        {/* Address + Map — Centered with equal columns */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {/* Address Card */}
           <motion.div
             className="glass-card p-8 flex flex-col items-center text-center justify-center"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -161,10 +161,10 @@ export default function ContactSection() {
           <motion.div
             className="glass-card overflow-hidden"
             style={{ minHeight: '400px' }}
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.5!2d79.95!3d12.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f40b77a3ce91%3A0x6d77e3a5bb97d9b1!2sArasar%20Koil!5e0!3m2!1sen!2sin!4v1690000000000"
