@@ -12,6 +12,7 @@ const Navbar = dynamic(() => import('@/components/navigation/Navbar'), { ssr: fa
 const ScrollProgress = dynamic(() => import('@/components/navigation/ScrollProgress'), { ssr: false });
 const ScrollToTop = dynamic(() => import('@/components/navigation/ScrollToTop'), { ssr: false });
 const ParallaxDecorations = dynamic(() => import('@/components/navigation/ParallaxDecorations'), { ssr: false });
+const TempleGuideWidget = dynamic(() => import('@/components/widgets/TempleGuideWidget'), { ssr: false });
 const HeroSection = dynamic(() => import('@/components/hero/HeroSection'), { ssr: false });
 const AboutSection = dynamic(() => import('@/components/about/AboutSection'), { ssr: false });
 const HistoryTimeline = dynamic(() => import('@/components/history/HistoryTimeline'), { ssr: false });
@@ -107,6 +108,9 @@ function TempleWebsite() {
 
           {/* Scroll to Top Button */}
           <ScrollToTop />
+
+          {/* Floating Temple Secrets Widget */}
+          <TempleGuideWidget />
         </main>
       )}
     </>
