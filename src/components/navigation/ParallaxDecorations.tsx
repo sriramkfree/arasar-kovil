@@ -19,7 +19,7 @@ export default function ParallaxDecorations() {
   const rotateFast = useTransform(scrollYProgress, [0, 1], [-30, 90]);
 
   return (
-    <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-10 select-none">
+    <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden z-30 select-none">
       {/* --- Section 1: About Area --- */}
       {/* Floating Bell Left */}
       <motion.div
