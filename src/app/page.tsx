@@ -3,11 +3,14 @@
 import { useState, useCallback, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { LanguageProvider } from '@/i18n/LanguageContext';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 // Dynamic imports for code splitting
 const LoadingScreen = dynamic(() => import('@/components/loading/LoadingScreen'), { ssr: false });
 const LanguageSelector = dynamic(() => import('@/components/language/LanguageSelector'), { ssr: false });
 const Navbar = dynamic(() => import('@/components/navigation/Navbar'), { ssr: false });
+const ScrollProgress = dynamic(() => import('@/components/navigation/ScrollProgress'), { ssr: false });
+const ScrollToTop = dynamic(() => import('@/components/navigation/ScrollToTop'), { ssr: false });
 const HeroSection = dynamic(() => import('@/components/hero/HeroSection'), { ssr: false });
 const AboutSection = dynamic(() => import('@/components/about/AboutSection'), { ssr: false });
 const HistoryTimeline = dynamic(() => import('@/components/history/HistoryTimeline'), { ssr: false });
@@ -20,6 +23,8 @@ const Footer = dynamic(() => import('@/components/footer/Footer'), { ssr: false 
 
 function TempleWebsite() {
   const [isLoading, setIsLoading] = useState(true);
+  const { scrollYProgress } = useScroll();
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '15%']);
 
   const handleLoadingComplete = useCallback(() => {
     setIsLoading(false);
@@ -68,6 +73,20 @@ function TempleWebsite() {
           className="relative w-full flex flex-col items-center overflow-x-hidden text-center"
           style={{ background: 'var(--bg-primary)' }}
         >
+          {/* Animated Parallax Background */}
+          <motion.div 
+            className="fixed inset-0 -z-30 opacity-15 pointer-events-none"
+            style={{
+              backgroundImage: "url('/images/hero-temple.png')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              y: backgroundY
+            }}
+          />
+
+          {/* Scroll Progress Bar */}
+          <ScrollProgress />
+
           {/* Floating Navigation */}
           <Navbar />
 
@@ -81,6 +100,9 @@ function TempleWebsite() {
           <ContactSection />
           <ReviewsSection />
           <Footer />
+
+          {/* Scroll to Top Button */}
+          <ScrollToTop />
         </main>
       )}
     </>

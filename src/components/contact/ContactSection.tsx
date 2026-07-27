@@ -59,14 +59,14 @@ export default function ContactSection() {
         </motion.div>
 
         {/* Contact Grid — 3 equal cards, perfectly centered */}
-        <div className="flex flex-col sm:flex-row items-stretch justify-center gap-6 mb-16 w-full max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16 w-full max-w-4xl mx-auto">
           {contactCards.map((card, i) => (
             <motion.a
               key={i}
               href={card.href}
               target={card.href.startsWith('http') ? '_blank' : undefined}
               rel={card.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className="glass-card p-6 flex-1 flex flex-col items-center justify-center text-center"
+              className="glass-card p-6 flex flex-col items-center justify-center text-center w-full overflow-hidden"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -83,17 +83,17 @@ export default function ContactSection() {
                 {card.icon}
               </div>
               <h3
-                className="text-lg font-bold mb-1"
+                className="text-lg font-bold mb-1 w-full truncate"
                 style={{ color: 'var(--text-primary)', fontFamily: 'var(--font-display)' }}
               >
                 {card.title}
               </h3>
               {card.subtitle && (
-                <p className="text-sm mb-1" style={{ color: 'var(--text-muted)' }}>
+                <p className="text-sm mb-1 w-full truncate" style={{ color: 'var(--text-muted)' }}>
                   {card.subtitle}
                 </p>
               )}
-              <p className="text-base font-semibold" style={{ color: 'var(--text-secondary)' }}>
+              <p className="text-sm sm:text-base font-semibold break-words w-full" style={{ color: 'var(--text-secondary)' }}>
                 {card.value}
               </p>
             </motion.a>
