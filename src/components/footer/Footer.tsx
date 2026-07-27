@@ -68,32 +68,32 @@ export default function Footer() {
         className="border-t px-6 py-12"
         style={{ borderColor: 'var(--border-subtle)' }}
       >
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+        <div className="max-w-6xl mx-auto flex flex-col items-center text-center gap-10">
           {/* Temple Info */}
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-2xl" style={{ color: 'var(--gold-300)' }}>ॐ</span>
+          <div className="flex flex-col items-center">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <span className="text-3xl" style={{ color: 'var(--gold-300)' }}>ॐ</span>
               <h3
-                className="text-base font-semibold"
+                className="text-xl font-bold"
                 style={{ color: 'var(--text-primary)', fontFamily: 'var(--font-display)' }}
               >
                 Arasar Kovil
               </h3>
             </div>
-            <p className="text-sm leading-relaxed" style={{ color: 'var(--text-muted)' }}>
+            <p className="text-base leading-relaxed max-w-sm" style={{ color: 'var(--text-muted)' }}>
               {td(temple.temple.subtitle)}
             </p>
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="flex flex-col items-center">
             <h3
-              className="text-sm font-semibold uppercase tracking-wider mb-4"
-              style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-display)' }}
+              className="text-base font-bold uppercase tracking-wider mb-5 text-gradient-gold"
+              style={{ fontFamily: 'var(--font-display)' }}
             >
               {t('footer.quickLinks')}
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3 flex flex-col items-center">
               {quickLinks.map((link, i) => (
                 <li key={i}>
                   <a
@@ -112,30 +112,27 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
-            <div className="mt-4">
-              <h4
-                className="text-sm font-semibold uppercase tracking-wider mb-2"
-                style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-display)' }}
-              >
-                {t('footer.contactUs')}
-              </h4>
-              <p className="text-sm" style={{ color: 'var(--text-muted)' }}>
-                {temple.contact.priests[0]?.phone}
-              </p>
-            </div>
+          <div className="flex flex-col items-center text-center">
+            <h4
+              className="text-base font-bold uppercase tracking-wider mb-2 text-gradient-gold"
+              style={{ fontFamily: 'var(--font-display)' }}
+            >
+              {t('footer.contactUs')}
+            </h4>
+            <p className="text-base font-semibold" style={{ color: 'var(--text-muted)' }}>
+              {temple.contact.priests[0]?.phone}
+            </p>
           </div>
-        </div>
 
-        {/* Copyright */}
-        <div
-          className="max-w-6xl mx-auto mt-12 pt-6 border-t text-center"
-          style={{ borderColor: 'var(--border-subtle)' }}
-        >
-          <p className="text-xs flex items-center justify-center gap-1" style={{ color: 'var(--text-muted)' }}>
-            © {year} {t('footer.copyright')} Made with{' '}
-            <Heart size={10} fill="currentColor" style={{ color: 'var(--saffron)' }} />
-          </p>
+          {/* Legal / Bottom */}
+          <div className="flex flex-col items-center mt-6 pt-6 border-t border-white/10 w-full max-w-lg mx-auto text-center">
+            <p className="text-sm" style={{ color: 'var(--text-muted)' }}>
+              © {year} Arasar Kovil. {t('footer.allRightsReserved')}
+            </p>
+            <p className="text-xs mt-2 flex items-center justify-center gap-1" style={{ color: 'var(--text-muted)' }}>
+              Made with <Heart size={12} className="text-red-500 animate-pulse" /> for Goddess Mahalakshmi
+            </p>
+          </div>
         </div>
       </div>
     </footer>
