@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
-import { Outfit, Inter } from "next/font/google";
+import { Cinzel, Lora } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const outfit = Outfit({
+const cinzel = Cinzel({
   subsets: ["latin"],
-  variable: "--font-outfit",
+  variable: "--font-display",
   display: "swap",
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-const inter = Inter({
+const lora = Lora({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-body",
   display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -113,7 +113,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${outfit.variable} ${inter.variable}`}>
+    <html lang="en" className={`${cinzel.variable} ${lora.variable}`}>
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600;700&display=swap"

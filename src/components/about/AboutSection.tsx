@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { gsap } from '@/lib/gsapConfig';
-import { Sparkles, Music, Star, Clock, Info, Shirt, X, BookOpen, ChevronRight, Crown, Sun, ShieldCheck, Volume2, Square } from 'lucide-react';
+import { Crown, Sparkles, BookOpen, Volume2, Square, Sun, ShieldCheck, X, XCircle, Music, Star, Clock, Info, Shirt, ChevronRight } from 'lucide-react';
 
 const iconMap: Record<string, React.ReactNode> = {
   sparkles: <Sparkles size={28} />,
@@ -290,9 +290,9 @@ export default function AboutSection() {
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Close Button */}
+              {/* Close Button Top */}
               <button
-                className="absolute top-5 right-5 p-3 rounded-full text-white bg-white/10 hover:bg-amber-500/20 border border-white/20 hover:border-amber-400 transition-all cursor-pointer shadow-lg"
+                className="absolute top-5 right-5 p-3 rounded-full text-white bg-black/40 hover:bg-amber-500/40 border border-amber-500/30 hover:border-amber-400 transition-all cursor-pointer shadow-2xl z-50 backdrop-blur-md"
                 onClick={closeModal}
                 aria-label="Close"
               >
@@ -379,7 +379,7 @@ export default function AboutSection() {
               </div>
 
               {/* Modal History Content */}
-              <div className="space-y-5 text-left max-h-[50vh] overflow-y-auto pr-2 w-full">
+              <div className="space-y-6 text-left max-h-[55vh] overflow-y-auto pr-3 w-full custom-scrollbar">
                 {/* Significance Card */}
                 <div className="p-4 rounded-2xl bg-amber-500/15 border border-amber-400/30 flex items-start gap-3">
                   <ShieldCheck size={22} className="text-amber-400 shrink-0 mt-0.5" />
@@ -436,6 +436,18 @@ export default function AboutSection() {
                     {td(selectedDeity.bestTime)}
                   </span>
                 </div>
+              </div>
+
+              {/* Fixed Bottom Close Button */}
+              <div className="w-full mt-6 pt-4 border-t border-amber-500/20">
+                <button
+                  onClick={closeModal}
+                  className="w-full py-4 rounded-xl bg-gradient-to-r from-amber-600/80 to-amber-500/80 hover:from-amber-500 hover:to-amber-400 text-white hover:text-black font-extrabold text-lg shadow-[0_0_30px_rgba(245,158,11,0.2)] transition-all flex items-center justify-center gap-3 border border-amber-400/50 backdrop-blur-md"
+                  style={{ fontFamily: 'var(--font-display)' }}
+                >
+                  <XCircle size={24} />
+                  <span className="uppercase tracking-widest">{t('close') || 'Close & Return'}</span>
+                </button>
               </div>
             </motion.div>
           </motion.div>
